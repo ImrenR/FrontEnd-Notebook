@@ -26,3 +26,15 @@ ul li{
   padding: 1rem;
  
 }
+.container {
+  margin-top: 50px;
+  background-color: purple;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+
+}
+.container *{
+  background-color: darkgoldenrod;
+  height: 50px;
+}
