@@ -15,9 +15,8 @@ ul{
   padding: 1rem 0;
    flex-wrap: wrap;
   display: flex;
- 
- 
-  
+  justify-content: center;
+  gap: 1rem;
 }
 
 ul li{
@@ -48,10 +47,10 @@ aside{
 width: 33%;
 }
 main {
-
+width: 33%;
 }
 article{
-
+width: 33%;
 }
 footer{
 width: 100%;
