@@ -56,19 +56,16 @@ body {
   height: 40px;
   margin-left: 1rem;
   overflow: hidden;
-  
 }
 
 .search-input input {
   border: none;
   padding-left: 0.5rem;
-  
 }
 
 .support {
   margin: 1rem;
   text-align: right;
-  
 }
 
 .support .support-number {
@@ -82,4 +79,30 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  margin: 60px;
+  padding: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.select-linen {
+  width: 310px;
+  height: 30px;
+  border: none;
+  gap: 1rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+.imren {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 40px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 700;
 }
