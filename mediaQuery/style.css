@@ -1,9 +1,15 @@
 *{
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
 }
 
-body {
-  
+.container {
+  display: grid;
+  grid-template-columns: 200px 500px 200px;
+  grid-template-rows: 100px 400px 100px;
+}
+
+.content {
+  border: 2px solid ;
+  background-color: aqua;
 }
