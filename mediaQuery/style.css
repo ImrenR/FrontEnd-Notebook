@@ -13,3 +13,17 @@
   border: 2px solid ;
   background-color: aqua;
 }
+
+.content1{
+  background-image: url(./images/desk2.jpg);
+  background-size: cover;
+}
+.content9{
+  background-image: url(./images/crossleg.jpg);
+  background-size: cover;
+}
+.content5{
+display: flex;
+justify-content: center;
+align-items: center;
+}
