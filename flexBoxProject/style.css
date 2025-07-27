@@ -1,3 +1,10 @@
+
+:root{
+  --green:rgb(120, 189, 108);
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
@@ -113,7 +120,7 @@ body {
   flex-wrap: wrap;
 }
 .essential {
-  background-color: rgb(74, 198, 74);
+  background-color: var(--green);
   border-radius: 15px;
   box-shadow: 4px 4px 10px green;
   display: flex;
