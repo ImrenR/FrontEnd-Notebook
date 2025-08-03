@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormElement</title>
+
+</head>
+<body>
+ <div class="container" style="border: 2px solid red; padding: 10px;">
+<section>
+  <form action="">
+<div>
+<label for="name">USERNAME:</label>
+<input type="text" id="name">
+</div>
+<br>
+<div>
+  <label for="password">PASSWORD:</label>
+  <input type="password" id="password">
+</div>
+<br>
+<div>
+  <label for="code">SECURITY CODE:</label>
+ <input type="text" id="code">
+</div>
+<br>
+<input type="submit" value="SAVE">
+<input type="reset" value="RESET">
+<br>
+
+<!------SELECT----->
+<label for="deserts">FAVORITE DESERTS</label>
+<select nam e="your favorites deserts" id="deserts">
+  <option value="" selected>------SELECT-----</option>
+  <optgroup label="Option-1">
+  <option value="Baklava">Baklava</option>
+  <option value="Kunefa">Kunefa</option>
+  <option value="Tresleches">Tresleches</option>
+  </optgroup>
+  <optgroup label="Option-2">
+  <option value="Irmik Tatlisi">Irmik Tatlisi</option>
+  <option value="San Sebastian">San Sebastian</option>
+  <option value="Sutlu Tatli">Sutlu Tatli</option>
+  </optgroup>
+</select>
+
+<!-----DataList-->
+
+<div>
+  <label for="country">The countries you want to go</label>
+  <input type="text"  id="country"  list="Countries">
+  <datalist id="Countries">
+<option value="Germany"></option>
+<option value="Portugal"></option>
+  </datalist>
+</div>
+<label for="comment">COMMENTS:</label> <br>
+<textarea name="" id="comment"></textarea>
+
+<div>
+  <fieldset>
+    <legend>Personal Info</legend>
+    <label for="fname">Name:</label>
+    <input type="text" id="fname" name="name">
+  </fieldset>
+</div>
+ </div>
+
+  </form>
+</section>
+
+</body>
+</html>
