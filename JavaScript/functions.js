@@ -16,4 +16,6 @@ do{
     let final=+prompt('Final tonunu giriniz:')
     let ortalama= vize*0.4 + final*0.6
 
+    ortalama>=50 ?
+  `${ders}`
   }while ()
