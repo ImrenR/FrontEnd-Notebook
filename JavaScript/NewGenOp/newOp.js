@@ -20,8 +20,9 @@ const team = [
     age:20,},
 ];
 
-team.forEach((person)=>{
-  console.log('Name',person.name)
+team.forEach(({name,surname,age})=>{
+
+ console.log(name,surname,age)
 }
 
 
