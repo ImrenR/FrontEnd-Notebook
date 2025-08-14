@@ -77,3 +77,18 @@ if (!myInput.value){
    ul.appendChild(li)
    myInput.value = ''
 })
+
+// Form icerisindeki submit butonuna her basildiginda bu onSubmit event i tetiklenir
+// submit eventi otomatik olarak enter tusunun kullanimi saglar.
+
+// form.onsubmit = function (e){
+//   e.preventDefault()
+// }
+
+myInput.onkeydown = function (e){
+  // console.log(e)
+
+  if(e.key === 'Enter'){
+    addBtn.click()
+  }
+}
