@@ -85,7 +85,7 @@ console.log(h2.parentElement.parentElement.parentElement)
 
 //* Asagi Yonde Traverse */
 //? Children, firstElementChild, lastElementChild
-
+//!parentElement in tam tersi
 
 //** Yatay yonde traverse */
 //! nextElementSibling, previousElementSibling
