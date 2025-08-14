@@ -63,3 +63,29 @@ const myItem = document.querySelector('main section.item-list h3')
 //** QUERYSELECTORALL */
 
 //! Bir nodelist dondurur. Nodelist dahili olarak bir foreach barindirir.
+
+//** TRAVERSING DOM */
+
+//? Bir HTML elementi uzerinden baska elementleri secmeye
+//? DOM traversing denilir. OZellikle dinamik olarak degisen
+//? (silme veya ekleme gibi) HTML elemanlarini secerken gerekli olabilir
+
+//? SEcme islemi 3 yolla yapilabilir
+//? Yukari yonde (parent)
+//? asagi yonde (children)
+//? Yatay yonde (sbling)
+
+//** Yukari yonde Traverse */
+//! parentElement, parentNode
+
+const h2 =document.getElementById('add-new-item');
+console.log(h2)
+console.log(h2.parentElement) // section.add-item
+console.log(h2.parentElement.parentElement.parentElement)
+
+//* Asagi Yonde Traverse */
+//? Children, firstElementChild, lastElementChild
+
+
+//** Yatay yonde traverse */
+//! nextElementSibling, previousElementSibling
