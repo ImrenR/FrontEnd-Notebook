@@ -87,5 +87,13 @@ console.log(h2.parentElement.parentElement.parentElement)
 //? Children, firstElementChild, lastElementChild
 //!parentElement in tam tersi
 
+
+const section = document.getElementById('section.add-item')
+console.log(section); 
+console.log(section.firstElementChild) // text yazi iceren htl elementlerinin yazisina erisir.
+
 //** Yatay yonde traverse */
 //! nextElementSibling, previousElementSibling
+
+
+console.log(allLi.nextElementSbling.innerText)
