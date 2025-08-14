@@ -65,6 +65,6 @@ body.onload = ()=> {
 //? DOMContentLoaded (metin v.b. icerikler yuklenince tetiklenir. Resim, link gibi iceriklerin yuklenmesi beklenmez)
 //* document.addEventListener("DOMContentLoaded", (e)=> {})
 
-addBtn.addEventListener("click", (e)=>{
+addBtn.addEventListener("click", ()=>{
   myInput.value = 'selam';
 })
