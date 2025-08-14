@@ -59,3 +59,7 @@ console.log(document.querySelector('.item-list'))
 console.log(document.querySelector('li')) // ilk gordugu elementi secer
 
 const myItem = document.querySelector('main section.item-list h3')
+
+//** QUERYSELECTORALL */
+
+//! Bir nodelist dondurur. Nodelist dahili olarak bir foreach barindirir.
