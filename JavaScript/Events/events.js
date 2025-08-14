@@ -45,7 +45,7 @@ const h2 = document.querySelector('h2')
 const body = document.querySelector('body')
 const myInput = document.getElementById('input')
 const addBtn = document.getElementById('btn')
-
+const ul = document.querySelector("ul")
 //* mouse h2 elementinin uzerine geldiginde tetiklenir
 
 h2.onmouseover = () => {
@@ -66,5 +66,14 @@ body.onload = ()=> {
 //* document.addEventListener("DOMContentLoaded", (e)=> {})
 
 addBtn.addEventListener("click", ()=>{
-  myInput.value = 'selam';
+  myInput.focus()
+if (!myInput.value){
+  alert ( "Lutfen inputu doldurun")
+  return
+}
+
+  const li = document.createElement('li')
+  li.textContent = myInput.value
+   ul.appendChild(li)
+   myInput.value = ''
 })
