@@ -35,4 +35,27 @@ Array.from(allLi).map((li)=>li.style.background= "pink")
 const myClassName = document.getElementsByClassName("list");
 console.log(myClassName);
 
-myClassName[0].innerText = "HTML DERSLERI"
+myClassName[0].innerText = "HTML DERSLERI";
+
+
+document.getElementsByClassName("item-list")[0].style.color = 'blue';
+
+
+//** QUERYSELECTOR */
+
+//! Query selector ile id, class , tag secilebilir. 
+//! Bu akista gordugu ilk elementi secer.
+
+//? id ile secmek icin 
+
+console.log(document.querySelector('#btn'));
+
+//? class ile secmek icin 
+
+console.log(document.querySelector('.item-list'))
+
+//? tag ile secmek icin 
+
+console.log(document.querySelector('li')) // ilk gordugu elementi secer
+
+const myItem = document.querySelector('main section.item-list h3')
