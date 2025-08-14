@@ -17,13 +17,13 @@
 
 //* Ornek : 
  
-document.querySelector('.header').onmouseover = function () {
-  document.querySelector(".header").style.color = 'blue';
-};
+// document.querySelector('.header').onmouseover = function () {
+//   document.querySelector(".header").style.color = 'blue';
+// };
 
-document.querySelector(".header").onmouseout = function () {
-  document.querySelector('.header').style.color = "black";
-}
+// document.querySelector(".header").onmouseout = function () {
+//   document.querySelector('.header').style.color = "black";
+// }
 
 //? addEventListener() metodu ile javascript kodunda Olay tanimlayarak
 
@@ -31,24 +31,24 @@ document.querySelector(".header").onmouseout = function () {
 
 //* Ornek : 
 
-document.querySelector(".header").addEventListener('mouseover',function (){
-document.querySelector(".header").style.color = 'blue';
-});
+// document.querySelector(".header").addEventListener('mouseover',function (){
+// document.querySelector(".header").style.color = 'blue';
+// });
 
-document.querySelector(".header").addEventListener('mouseout',function (){
-document.querySelector(".header").style.color = 'black';
-});
+// document.querySelector(".header").addEventListener('mouseout',function (){
+// document.querySelector(".header").style.color = 'black';
+// });
 
 //** EVENT TANIMLAMALARI */
-
+const h2 = document.querySelector('h2')
 //* mouse h2 elementinin uzerine geldiginde tetiklenir
 
-h2.onmouseover = function(){
+h2.onmouseover = () => {
   h2.classList.add('red','center')
 }
 
 //*mouse h2 elementinden ayrildiginda tetiklenir
 
-h2.onmouseout = function (){
-  h2.classList.remove ('red', 'center')
+h2.onmouseout = () => {
+  h2.classList.remove('red', 'center')
 }
