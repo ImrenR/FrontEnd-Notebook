@@ -92,3 +92,12 @@ myInput.onkeydown = function (e){
     addBtn.click()
   }
 }
+
+// ? ya da asagidaki yontemle yapilir. tek farki asagi da on yazilmiyor
+//? 
+
+// myInput.addEventListener('keydown', (e)=> {
+//   if(e.key === "Enter"){
+//     addBtn.click()
+//   }
+// })
