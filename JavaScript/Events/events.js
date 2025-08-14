@@ -24,3 +24,17 @@ document.querySelector('.header').onmouseover = function () {
 document.querySelector(".header").onmouseout = function () {
   document.querySelector('.header').style.color = "black";
 }
+
+//? addEventListener() metodu ile javascript kodunda Olay tanimlayarak
+
+//! Syntax : element.addEventListener(olay,funcktion, useCapture)
+
+//* Ornek : 
+
+document.querySelector(".header").addEventListener('mouseover',function (){
+document.querySelector(".header").style.color = 'blue';
+});
+
+document.querySelector(".header").addEventListener('mouseout',function (){
+document.querySelector(".header").style.color = 'black';
+});
