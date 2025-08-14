@@ -13,7 +13,7 @@
 
 //** DOM EVENTLERI KULLANMA YONTEMI */
 
-//? HTML sayfasinda herhangi bir ekleme yapmaksizin sadece js ile olaylari kontrol ederek 
+//? 3. yontem : HTML sayfasinda herhangi bir ekleme yapmaksizin sadece js ile olaylari kontrol ederek 
 
 //* Ornek : 
  
@@ -25,7 +25,7 @@
 //   document.querySelector('.header').style.color = "black";
 // }
 
-//? addEventListener() metodu ile javascript kodunda Olay tanimlayarak
+//? 4. yontem : addEventListener() metodu ile javascript kodunda Olay tanimlayarak
 
 //! Syntax : element.addEventListener(olay,funcktion, useCapture)
 
@@ -41,6 +41,10 @@
 
 //** EVENT TANIMLAMALARI */
 const h2 = document.querySelector('h2')
+const body = document.querySelector('body')
+const myInput = document.getElementById('input')
+
+
 //* mouse h2 elementinin uzerine geldiginde tetiklenir
 
 h2.onmouseover = () => {
@@ -52,3 +56,9 @@ h2.onmouseover = () => {
 h2.onmouseout = () => {
   h2.classList.remove('red', 'center')
 }
+// Dom iceriklerinin tamami yuklendikten sonra tetiklenen event (onload)
+body.onload = ()=> {
+  myInput.focus()
+}
+
+
