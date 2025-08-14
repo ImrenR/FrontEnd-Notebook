@@ -38,3 +38,17 @@ document.querySelector(".header").style.color = 'blue';
 document.querySelector(".header").addEventListener('mouseout',function (){
 document.querySelector(".header").style.color = 'black';
 });
+
+//** EVENT TANIMLAMALARI */
+
+//* mouse h2 elementinin uzerine geldiginde tetiklenir
+
+h2.onmouseover = function(){
+  h2.classList.add('red','center')
+}
+
+//*mouse h2 elementinden ayrildiginda tetiklenir
+
+h2.onmouseout = function (){
+  h2.classList.remove ('red', 'center')
+}
