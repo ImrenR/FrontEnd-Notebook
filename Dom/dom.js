@@ -29,3 +29,10 @@ arrAllLi.forEach((li)=> li.style.color = 'red')
 console.log(Array.from(allLi))
 Array.from(allLi).map((li)=>li.style.background= "pink")
 //!------------------------------------------------------------------------------!//
+
+//** GETELEMENTBYCLASSNAME */
+
+const myClassName = document.getElementsByClassName("list");
+console.log(myClassName);
+
+myClassName[0].innerText = "HTML DERSLERI"
