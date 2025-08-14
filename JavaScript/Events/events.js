@@ -40,6 +40,7 @@
 // });
 
 //** EVENT TANIMLAMALARI */
+
 const h2 = document.querySelector('h2')
 const body = document.querySelector('body')
 const myInput = document.getElementById('input')
@@ -60,5 +61,8 @@ h2.onmouseout = () => {
 body.onload = ()=> {
   myInput.focus()
 }
+
+//? DOMContentLoaded (metin v.b. icerikler yuklenince tetiklenir. Resim, link gibi iceriklerin yuklenmesi beklenmez)
+//* document.addEventListener("DOMContentLoaded", (e)=> {})
 
 
