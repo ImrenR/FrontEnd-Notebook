@@ -15,11 +15,11 @@ ekleFormu.addEventListener("submit", (e) => {
 });
 
 //******************** EXPENSES FORM ********************************* */
-
-const harcamaFormu = document.querySelector("#harcama-formu");
 const tarih = document.querySelector("#tarih");
 const miktar = document.querySelector("#miktar");
 const harcamaAlani = document.querySelector("#harcamaAlani");
+const harcamaFormu = document.querySelector("#harcama-formu");
+const harcamaTablosu = document.querySelector("#harcamaTablosu");
 let harcamaListesi = JSON.parse(localStorage.getItem("harcamam")) || [];
 
 harcamaFormu.addEventListener("submit", (e) => {
@@ -27,7 +27,7 @@ harcamaFormu.addEventListener("submit", (e) => {
   const yeniHarcama = {
     tarih: tarih.value,
     miktar: Number(miktar.value), //! sayi verilerinde NUMBER i sakin unutma !!!
-    information: harcamaAlani.textContent,
+    aciklama: harcamaAlani.value,
     id: new Date().getTime(), // benzersiz olmasi icin, bu ne icin gerekir , ilerde silmek icin id yi hemen bulabilmek icin
   };
 
@@ -42,5 +42,19 @@ harcamaFormu.addEventListener("submit", (e) => {
   // Ama burada girilen butun yeniu harcamalar bu sekilde depolanmaz. depolamak icin array a cevirip dondurmek gerekir
   //
 });
+harcamaListesi.forEach((harcama) => {
+harcalamariTablodaGoster(harcama)
+})
+//!*************************** EXPENSES FOR EXPLANATION ****************//
+// eger bir dongu olacak ve guncellenecek bir tablo oalcaksa function kullanmamiz gerek
 
-//************************** TABLE ****************** */
+function harcalamariTablodaGoster ({id, miktar, tarih,aciklama}){
+  harcamaTablosu.innerHTML += `
+  <tr>
+              <th scope="row">${aciklama}</th>
+              <td>${miktar}</td>
+              <td>${tarih}</td>
+              <td><i class="fa-solid fa-trash-can text-danger"></td>
+            </tr>`
+}
+
