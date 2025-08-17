@@ -43,3 +43,4 @@ harcamaFormu.addEventListener("submit", (e) => {
   //
 });
 
+//************************** TABLE ****************** */
