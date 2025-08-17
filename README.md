@@ -1,5 +1,5 @@
 # FrontEndRecap
-FrontendRecap
+
 
 A collection of frontend practice projects built with HTML, CSS, and Vanilla JavaScript.
 The goal of this repository is to recap core web development concepts by building small, hands-on projects without relying on external frameworks or libraries.
