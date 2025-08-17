@@ -33,6 +33,7 @@ function updateTodoList() {
 function createTodoItem(todo) {
   const todoId = "todo=" + todoIndex;
   const todoLI = document.createElement("li");
+  const todoText = todo.text;
   todoLI.className = "todo";
   todoLI.innerHTML = `
   
@@ -51,7 +52,7 @@ function createTodoItem(todo) {
             </svg> 
           </label>
           <label for="${todoId}" class="todo-text">
-            ${todo}
+            ${todoText}
           </label>
           <button class="delete-button">
             <svg fill="var (--secondar-color)"
@@ -71,6 +72,12 @@ function createTodoItem(todo) {
   deleteButton.addEventListener("click", () => {
     deleteTodoItem(todoIndex);
   });
+  const checkbox = todoLI.querySelector("input");
+  checkbox.addEventListener("change", ()=> {
+   allTodos[todoIndex].completed = checkbox.checked;
+   saveTodos();
+  })
+  checkbox.checked= todo.completed;
   return todoLI;
 }
 function deleteTodoItem(todoIndex){
