@@ -2,9 +2,11 @@ const gelirInput = document.querySelector("#gelirInput");
 const ekle = document.querySelector("#ekle");
 const ekleFormu = document.querySelector("#ekleFormu");
  const gelirGoster = document.querySelector("#gelirGoster");
+
 // let gelirler =sessionStorage.getItem("gelirim") ||0; // 5. islem : 4. islemde girilen inputlarin gorunmesi icin getItem deriz
 // girilen inputlar maalesef 5. islemde yan yana string olarak gelir 9006004000 gibi bunu onlemek ve toplanarak geldigini gormek icin JSON.parse diyelim
 let gelirler = JSON.parse(sessionStorage.getItem("gelirim")) || 0;
+
 ekleFormu.addEventListener("submit", (e) => {
   e.preventDefault();
   // gelirler = Number(gelirInput.value) // 1. islem = burada sadece girilen ilk deger gorunur ama toplanmaz
