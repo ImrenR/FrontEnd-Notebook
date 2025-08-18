@@ -1,7 +1,7 @@
 // *****************************************************
-                  // FETCH API
+// FETCH API
 // ****************************************************
- 
+
 //? Dis kaynaklardan veri getirmek icin kullanilan basit bir arama birimidir.
 //? Ag istekleri yapmamiza ve cevaplari yonetebilmemize olanak saglar.
 //! JS ortaminda en cok kullanilan Asenkron islem basinda gelmektedir.
@@ -13,7 +13,6 @@
 //! throw ile hata firlatirsak kodumuz o satirda durur.
 //! kodumuzu durdurmak istemezsek diger sayfadaki kodlari kullaniriz.
 
- 
 //? Chain yapisi
 
 // fetch("https://api.github.com/users").then((res)=>res.json())
@@ -22,34 +21,32 @@
 // fetch("https://api.github.com/users").then((res)=>res.json()).then((veri)=>console.log(veri))
 // jsona cevir dedim ondan sonra veriyi ekrana bastirdim ve 30 tane array icinde objectlerim gelmis oldu
 
-
-//!console.log a bastirmak degil de divlere yazdirsin fonksiyonla dersek 
+//!console.log a bastirmak degil de divlere yazdirsin fonksiyonla dersek
 //!console.log yerine bir fonksiyon yazdik
 
-
 fetch("https://api.github.com/users") // database e istek at
-.then((res)=> {  
+  .then((res) => {
+    if (res.ok == false) {
+      throw new Error("There is an error in url"); //! hata kontrolu
+    }
+  return res.json(); // hata yoksa veriyi jsona return ile cevirebilirsin ve de sonra gelenlerin sadece Json kismini istiyorum yani dizi obje her neyse
+  
+  }) 
+   .then((veri) => ekranaBastir(veri))
+  .catch((error) => console.log(error)); // o dizi kismini al ve ekranaBastir funksiyonuna gonder
+// ekranaBastir metodu cagrilmis oldu.
+const ekranaBastir = (data) => {
+ 
 
-if(res.ok == false){
-  throw new Error ("There is error in url")   //! hata kontrolu
-}
-  res.json(); // hata yoksa veriyi jsona cevirebilirsin
-})                                  // sonra gelenlerin sadece Json kismini istiyorum yani dizi obje her neyse
-.then((veri)=>ekranaBastir (veri));  // o dizi kismini al ve ekranaBastir funksiyonuna gonder
-                                     // ekranaBastir metodu cagrilmis oldu.
-const ekranaBastir=(data)=>{
-  // console.log(data);
-
-  data.forEach(({login,avatar_url,node_id})=>{
+  data.forEach(({ login, avatar_url, node_id }) => {
     document.querySelector("section").innerHTML += `
     
 <h1>${login}</h1>
 <img src=${avatar_url} width="300px"/>
 <h3>${node_id}</h3>    
     
-    `
-  })
-}
+    `;
+  });
+};
 
 // data,res ve veri isimleri onemli degil tamami da ayni olabilir.
-
