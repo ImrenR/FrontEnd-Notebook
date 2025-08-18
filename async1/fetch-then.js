@@ -34,12 +34,12 @@ fetch("https://api.github.com/users") // database e istek at
 const ekranaBastir=(data)=>{
   // console.log(data);
 
-  data.forEach((item)=>{
+  data.forEach(({login,avatar_url,node_id})=>{
     document.querySelector("section").innerHTML += `
     
-<h1>${item.login}</h1>
-<img src=${item.avatar_url} width="300px"/>
-<h3>${item.node_id}</h3>    
+<h1>${login}</h1>
+<img src=${avatar_url} width="300px"/>
+<h3>${node_id}</h3>    
     
     `
   })
