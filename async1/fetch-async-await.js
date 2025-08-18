@@ -17,3 +17,58 @@
 //! JS try anahtar kelimesi kod blogundaki kodlari calisma zamaninda test etmek icin kullanilir
 //! JS finally anahtar kelimesi hata olusmasi veya olusmamasi durumunda (her durumda) calisacak kodlari 
 //! yazdirmak icin kullanilir.
+
+//*************************************************************************************************************************************************************************************************/
+//* ASAGIDAKI ORNEGIN ACIKLAMASI     : 
+
+//? 1- getData () fonksiyonumuz var asagida ve onu fonksiyon sonunda cagirdik, biliyoruz ki fonksiyon cagirilmadan(invoke)
+//? calismaz!
+ 
+//? 2- Database den verigetirmemiz gerekiyor ne yapariz ? : 
+//! fetch ile verileri cekeriz bu sirada diger kodlar beklemesin diye onune await deriz
+//! await in syntax i neydi async await ti. fonksiyona bunun bir asenkron oldugunu async yi=> () onune getirirek belirtiriz.
+ 
+//? 3- verilere bekle dedik, fonksiyona kafan karismasin bu async yazarak belirttik. ondan sonra
+//? verileri jsona cevirerek onlari bir dizi ve obje olarak bastiririz ama bunlarin 
+//? onune de await demek zorundayiz : await res.json()
+
+//? 4- getData fonskiyonun icerisine verileri dondermek icin bir fonksiyon cagiririz 
+//?  ekranaBastir (data) bu cagirilan fonksiyonu onun altinda ayri olarak belirtip verileri dondeririz
+
+//? 5- ekranaBastir(data) fonksiyonunda data icerisine gireriz ( fetch ile cagirdigimiz veriler)
+//? jsonla diziye cevirlen veriler array metodlariyla kolaylikla donderilebilir
+//! data.forEach ya da data.filter or map ile icine girer bir suslu acariz
+//* hmtl sayfasi bizim kokumuz oradan bakariz hangi elemente bastiracaksak onu seceriz
+//* const abc = document.querySelector("section").innerHTML += `` diyerek ( + nin onemi
+//* gelen ilk veri gitmesin ard arda bastirsin sirayla diyedir)
+//* bakctickten sonra icinde nasil bir gorunum saglamak istiyorsak h1 img h2 elementlerini
+//* yazar ${} yardimiyla ve verideki degerleri bilerek data.forEach e verilen function ismiyle
+//* ${item.image} html elementlerinin icine bastirmis oluruz
+
+
+
+
+//!! async awaitinin syntax i fonksiyonlarda sarmallanmali !!!
+const getData=async()=>{ // await derken fonksiyon onune async oldugunu belirtmek gerekir
+
+ const rest = await fetch("https://api.tvmaze.com/search/shows?q=girls"); // fetch ile verleri cek. verileri cekerken sure gecebilir, beklerken bizi bekletme kendin bekle demek icin await demek lazim basina
+
+const data = await rest.json(); // array geldi bu sekilde
+
+ekranaBastir(data)
+
+
+}
+
+getData()
+
+const ekranaBastir = (data)=>{
+ data.forEach((item)=>{
+  const html1 = document.querySelector("section").innerHTML +=`
+  <h1>${item.show.name}</h1>
+  <img src=""
+/>  
+  
+  `
+ })
+}
