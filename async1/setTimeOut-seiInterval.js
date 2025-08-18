@@ -40,4 +40,6 @@ const inter= setInterval(()=>{
   if(sayac == 7){
     clearInterval(inter)
   }
+
+  
 },1000)
