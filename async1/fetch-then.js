@@ -24,13 +24,19 @@
 
 
 //!console.log a bastirmak degil de divlere yazdirsin fonksiyonla dersek 
-//!console.og yerine bir fonksiyon yazdik
+//!console.log yerine bir fonksiyon yazdik
 
 
 fetch("https://api.github.com/users") // database e istek at
-.then((res)=>res.json())             // sonra gelenlerin sadece Json kismini istiyorum yani dizi obje her neyse
+.then((res)=> {  
+
+if(res.ok == false){
+  throw new Error ("There is error in url")   //! hata kontrolu
+}
+  res.json(); // hata yoksa veriyi jsona cevirebilirsin
+})                                  // sonra gelenlerin sadece Json kismini istiyorum yani dizi obje her neyse
 .then((veri)=>ekranaBastir (veri));  // o dizi kismini al ve ekranaBastir funksiyonuna gonder
-                                    // ekranaBastir metodu cagrilmis oldu.
+                                     // ekranaBastir metodu cagrilmis oldu.
 const ekranaBastir=(data)=>{
   // console.log(data);
 
