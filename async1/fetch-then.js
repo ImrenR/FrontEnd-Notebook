@@ -13,6 +13,9 @@
 //! throw ile hata firlatirsak kodumuz o satirda durur.
 //! kodumuzu durdurmak istemezsek diger sayfadaki kodlari kullaniriz.
 
+ 
+//? Chain yapisi
+
 // fetch("https://api.github.com/users").then((res)=>res.json())
 // javascript object notasyon da goster yani console log ta yazdirmada object array olarak goster
 
@@ -29,7 +32,18 @@ fetch("https://api.github.com/users") // database e istek at
 .then((veri)=>ekranaBastir (veri));  // o dizi kismini al ve ekranaBastir funksiyonuna gonder
                                     // ekranaBastir metodu cagrilmis oldu.
 const ekranaBastir=(data)=>{
-  console.log(data);
+  // console.log(data);
+
+  data.forEach((item)=>{
+    document.querySelector("section").innerHTML += `
+    
+<h1>${item.login}</h1>
+<img src=${item.avatar_url} width="300px"/>
+<h3>${item.node_id}</h3>    
+    
+    `
+  })
 }
 
 // data,res ve veri isimleri onemli degil tamami da ayni olabilir.
+
