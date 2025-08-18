@@ -13,3 +13,20 @@
 setTimeout(()=>{
   console.log("first")
 },3000); // yazi 3 sn sonra gelir consola
+ 
+console.log("Hello") // Once hello yu print eder ardindan 3 sn sonra first gelir
+
+setTimeout(()=>{
+  console.log("Imren")
+},2000) // ikinci yazilacak olan burasidir 2sn oldugu icin
+
+
+//! Notes : 
+//*Asenkron( setInterval, clearInterval) belli araliklarla 
+// durulana kadar devam eder. mesela 1 dk da doviz kurunu guncellemek
+// icin kullanilabilir.
+//******************************************************** */
+
+
+//? setInterval non-blocking (kod burada takili kalmaz alttaki kodlarda calisir)
+
