@@ -31,3 +31,5 @@ fetch("https://api.github.com/users") // database e istek at
 const ekranaBastir=(data)=>{
   console.log(data);
 }
+
+// data,res ve veri isimleri onemli degil tamami da ayni olabilir.
