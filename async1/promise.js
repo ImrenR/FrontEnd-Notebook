@@ -5,18 +5,18 @@
 //! Zincirleme (chain) olarak kullanilabilirler.
 
 
-const person = {name: "Kagan", surname: "Bilir"};
+// const person = {name: "Kagan", surname: "Bilir"};
 
-new Promise ((resolve, reject)=>{
-  //if databasenden  veriler duzgun geldiyse
+// new Promise ((resolve, reject)=>{
+//   //if databasenden  veriler duzgun geldiyse
 
-  if(true) {
-    // if (false)
-    resolve(person);
+//   if(true) {
+//     // if (false)
+//     resolve(person);
   
-  } else {
-    reject (new Error("promise basarisiz"));
-  }
-})
-.then((response)=> console.log(response))
-.catch((error)=> console.log(error))
+//   } else {
+//     reject (new Error("promise basarisiz"));
+//   }
+// })
+// .then((response)=> console.log(response))
+// .catch((error)=> console.log(error))
