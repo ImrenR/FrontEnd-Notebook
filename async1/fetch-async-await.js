@@ -46,9 +46,7 @@
 //* ${item.image} html elementlerinin icine bastirmis oluruz
 
 
-
-
-//!! async awaitinin syntax i fonksiyonlarda sarmallanmali !!!
+const defaultImage = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMona_Lisa_%2528Prado%2529&psig=AOvVaw2EPWZy8IWsnfBsniHVS_vh&ust=1755626753567000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNjNy9f5lI8DFQAAAAAdAAAAABAE"
 const getData=async()=>{ // await derken fonksiyon onune async oldugunu belirtmek gerekir
 
  const rest = await fetch("https://api.tvmaze.com/search/shows?q=girls"); // fetch ile verleri cek. verileri cekerken sure gecebilir, beklerken bizi bekletme kendin bekle demek icin await demek lazim basina
@@ -57,17 +55,17 @@ const data = await rest.json(); // array geldi bu sekilde
 
 ekranaBastir(data)
 
-
 }
 
 getData()
 
 const ekranaBastir = (data)=>{
  data.forEach((item)=>{
-  const html1 = document.querySelector("section").innerHTML +=`
-  <h1>${item.show.name}</h1>
-  <img src=""
-/>  
+ document.querySelector("section").innerHTML +=`
+
+  <h1>${item.show.name}</h1
+
+  <img src=${item.show.image?.medium || defaultImage} alt="show" />
   
   `
  })
