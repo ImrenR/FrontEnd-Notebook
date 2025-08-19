@@ -3,7 +3,7 @@ console.log("Hi from index.js")
 //* with default export
 // import sayHi, { timeOfStudy } from "./myModules"
 //or
-import sayHi,{ // you can change the name of sayHi as Osman doesnt matter
+import sayHi,{ // 1. you can change the name of sayHi as Osman doesnt matter
 increase,
 decrease,
 sumThem as topla,
@@ -20,4 +20,4 @@ console.log(decrease(2));
 console.log(myName);
 console.log(sayHi);
 
-sayHi();
+sayHi(); //1.
