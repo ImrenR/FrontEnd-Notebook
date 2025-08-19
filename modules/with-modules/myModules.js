@@ -14,3 +14,12 @@ const increase = (x) => (counter += x);
 const decrease = (x) => (counter -= x);
 
 const myName = "imren";
+
+export { increase, decrease, myName };
+
+//* default export
+function sayHi() {
+  console.log("Hi");
+}
+
+export default sayHi;
