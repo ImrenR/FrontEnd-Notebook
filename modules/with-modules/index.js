@@ -2,7 +2,7 @@ console.log("Hi from index.js")
 
 //* with default export
 // import sayHi, { timeOfStudy } from "./myModules"
-//or // sayfanin tamami export edilince from kullan
+//or
 import sayHi,{ // 1. you can change the name of sayHi as Osman doesnt matter
 increase,
 decrease,
@@ -20,4 +20,4 @@ console.log(decrease(2));
 console.log(myName);
 console.log(sayHi);
 
-sayHi(); 
+sayHi(); // ismin bir onemi yok bye da yazabilirsin ama yukrda da bye yazmalisin
