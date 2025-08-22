@@ -2,7 +2,7 @@ console.log("Hi from myModules.js");
 
 //! named export
 
-export const timeOfStudy = 40;
+export const timeOfStudy = 40; // ana sayanin kullanabilmesi icin export etmek onemli
 export function sumThem(s1, s2) {
   return s1 + s2;
 }
