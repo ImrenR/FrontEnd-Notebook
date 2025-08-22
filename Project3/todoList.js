@@ -62,3 +62,5 @@ function deleteCheck(a) {
     todo.classList.toggle('completed'); // If the element does NOT have the completed class → add it.
   }
 }
+
+//48:20
