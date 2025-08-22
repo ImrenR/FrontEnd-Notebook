@@ -60,6 +60,7 @@ list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 1s ease;
 
 }
 
@@ -80,4 +81,22 @@ list-style: none;
   background: green;
 }
 
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+  pointer-events: none;
+}
+
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5rem;
+}
+
+.fall{
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
 
