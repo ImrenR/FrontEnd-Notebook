@@ -53,8 +53,11 @@ function deleteItem(a){
   const item =a.target;
   if(item.classList[0] === "trash-btn"){
     const todo= item.parentElement;// goes one level up in the DOM (todoDiv)
+   // Animation
     todo.classList.add("fall")
-    todo.remove();
+    todo.addEventListener("transitionend",function(){
+      todo.remove()
+    } )
   }
   //Check mark
   if (item.classList[0] === "complete-btn"){
@@ -70,7 +73,7 @@ function deleteItem(a){
 
 
 
-// Animation
+
 
 
 
