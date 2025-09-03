@@ -1,6 +1,7 @@
 
 import './App.css';
 import Events from './components/events/Events';
+import DataStorage from './components/useStateHook/DataStorage';
 import UseStateHook from './components/useStateHook/UseStateHook';
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
      {/* <h1>EVENTS NOTES</h1> */} 
 
      {/*<Events/>*/} 
-     <UseStateHook/>
+     {/*<UseStateHook/>
+     */}
+     <DataStorage/>
     </div>
   );
 }
