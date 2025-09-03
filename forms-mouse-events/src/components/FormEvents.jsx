@@ -28,6 +28,18 @@ const FormEvents = () => {
           aria-describedby="passwordHelpBlock"
         />
       </form>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="checkDefault"
+        />
+        <label class="form-check-label" for="checkDefault">
+          Check me out
+        </label>
+      </div>
+      <input class="btn btn-primary" type="submit" value="Submit"></input>
     </div>
   );
 };
