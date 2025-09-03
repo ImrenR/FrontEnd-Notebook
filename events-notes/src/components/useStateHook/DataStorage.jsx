@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import UseStateHook from "./UseStateHook";
 
 const DataStorage = () => {
@@ -9,18 +9,24 @@ const DataStorage = () => {
   //! or else
   const [user, setUser] = useState({ad: "Imren", soyad:"Rahbay", meslek: "Software Dev"
   })
-
+   //? flag usage 
+   
+   const [visible,setVisible] = useState (true)
 
 
   
   return (
     <div>
       <h2 className="text-center m-2">Working with several data</h2>
-      <div className="bg-secondary">
+      {
+        //short circuit
+        visible &&  <div className="bg-secondary">
       <p>NAME :{user.ad}</p>
       <p>SURNAME :{user.soyad}</p>
       <p>OCCUPATION :{user.meslek}</p>
       </div>
+      }
+     
       <button className="btn btn-primary m-2" onClick={()=> setUser({ad: "Ana", soyad:"Walnut", meslek: "Engineer"})}>
         UPDATE
       </button>
@@ -28,6 +34,16 @@ const DataStorage = () => {
        <button className="btn btn-primary m-2" onClick={()=> setUser({...user,ad: "Ana"})}>
         UPDATE NAME
       </button>
+       
+
+        <button className="btn btn-danger m-2" onClick={()=> setVisible(!visible)}>
+       HIDE/SHOW
+      </button>
+
+
+
+
+
       {/* <button className="btn btn-primary m-2" onClick={()=> setAd("j")}>
         UPDATE NAME
       </button>
