@@ -1,6 +1,8 @@
 import React from 'react'
 
 const Events = () => {
+   let message=""
+
 
   const handleTikla= (event)=> {
     alert("Clicked")
@@ -9,6 +11,11 @@ const Events = () => {
 
 const writeMessage = (msg)=>{
 console.log(msg)
+}
+
+const changeIt = ()=>{
+message = "Hi All!"
+console.log(message)
 }
 
   return (
@@ -22,9 +29,32 @@ console.log(msg)
       {/** 3. Using parameters*/}
 
        <button className="btn btn-success" onClick={()=>writeMessage("Parameter Sent") }>Message me</button>
-       <p>OLA!</p>
+       <button className="btn btn-secondary m-1" onClick={changeIt}>CHANGE</button>
+       <p>{message}</p>
       </div>
   )
 }
 
 export default Events
+
+
+
+
+
+/* Onemli Notlar : */
+//! message console da guncellendigini ancak DOM da guncellenmedigini gorduk : */
+//* Bunun sebebi REACT in aksi belirtilmedigi surece elementleri static : */
+//* olarak kabul etmesinden kaynaklanir */
+
+//* React bunu DOM islemlerini minimize etmek icin yapmaktadir  */
+//* React a hangi elementleri interaktif oldugu belirtilmelidir */
+
+//! React a elementlerin interaktif oldugunu belirtmek icin stateler kullanilir : */
+//! State, elementlerin degisiklik durumlarini tutan nesnelerdir */
+
+//? ReactJS de state leri kullanmak icin 2 ayri component yapisii bulunmaktadir 
+//? 1. Hooks (functional Components)
+//? 2. Statefull Classes (classes components)
+
+//? Biz su ana kadar uygulamarimizda Fonksiyonel Componentleri kullandik
+//? Yaygin kullanim fonksiyonel olandir
