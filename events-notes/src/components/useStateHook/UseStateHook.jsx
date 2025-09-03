@@ -20,8 +20,8 @@
 import { useState } from "react";
 
 const UseStateHook = () => {
-  const [counter, setCounter] = useState(0); //! setCounter bir ayarlayicidir
-
+  const [counter, setCounter] = useState(1); //! setCounter bir ayarlayicidir
+//? counter useState() ile 1 e tanimlanmistir. Degisiklikler de setCounter la yapilir
   const arttir = () => setCounter(counter + 1); // Boylelikle Dom a basmis olduk
 
   return (
@@ -32,7 +32,7 @@ const UseStateHook = () => {
         
         Arttir
       </button>
-           <button className="btn btn-primary m-2" onClick={setCounter(counter-1)}>
+           <button className="btn btn-primary m-2" onClick={()=>setCounter(counter-1)}>
             Azalt
            </button>
     </div>
