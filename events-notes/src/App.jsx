@@ -1,11 +1,13 @@
 
 import './App.css';
+import Events from './components/events/Events';
 
 function App() {
 
   return (
-    <div className="p-3 text-primary">
-      <h1>EVENTS NOTES</h1>
+    <div >
+     {/* <h1>EVENTS NOTES</h1> */}
+      <Events/>
     </div>
   );
 }
