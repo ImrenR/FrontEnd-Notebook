@@ -11,8 +11,8 @@ function App() {
       {/* <h1>React Events</h1> */}
       {/* <Events/> */}
       {/* <UseStateHook/> */}
-      <DataStorage/> 
-      
+       <DataStorage/> 
+     
     </div>
   );
 }
