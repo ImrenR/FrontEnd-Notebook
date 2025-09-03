@@ -14,31 +14,25 @@
 //** kullanilmamalidir.
 //** Hook' lar sadece React fonksiyonel componentlerin icerisinde cagrilmalidir.
 //**  Normal JS fonksiyonlari icerisinde cagrilmamalidir.
-//**  (Custom Hook lar icerisinde bir hook cagrilabilir)   
+//**  (Custom Hook lar icerisinde bir hook cagrilabilir)
 //? https://react.dev/reference/react/hooks#state-hooks
 
+import { useState } from "react";
 
 const UseStateHook = () => {
-  let counter=0
-  
+  const [counter, setCounter] = useState(0); //! setCounter bir ayarlayicidir
 
-const arttir = ()=> {
- counter++
- console.log(counter)
-}
+  const arttir = () => setCounter(counter+1) // Boylelikle Dom a basmis olduk
 
   return (
     <div>
-      <h2 className="text-center">
-        USESTATE HOOK
-      </h2>
+      <h2 className="text-center">USESTATE HOOK</h2>
       <h3> Count:{counter}</h3>
-      <button className="btn btn-primary m-2" onClick={arttir}>Arttir</button>
+      <button className="btn btn-primary m-2" onClick={arttir}>
+        Arttir
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default UseStateHook
-
-
-
+export default UseStateHook;
