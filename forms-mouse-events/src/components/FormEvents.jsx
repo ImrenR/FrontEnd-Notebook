@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 const FormEvents = () => {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [date, setDate] = useState("");
+  const [remember, setRemember] = useState(false);
+  const [country, setCountry] = useState("");
+
   return (
     <div className="mt-4 p-3">
       <div className="text-center">
@@ -9,7 +17,12 @@ const FormEvents = () => {
           <label htmlFor="name" className="form-label">
             Name
           </label>
-          <input type="text" className="form-control" id="name" />
+          <input
+            onChange={() => setName()}
+            type="text"
+            className="form-control"
+            id="name"
+          />
         </div>
         <div className="mb-3">
           <label htmlFor="inputPassword" className="col-sm-2 col-form-label">
@@ -17,9 +30,13 @@ const FormEvents = () => {
           </label>
         </div>
         <div className="col-sm-10">
-          <input type="password" className="form-control" id="inputPassword" />
+          <input
+            onChange={() => setPassword()}
+            type="password"
+            className="form-control"
+            id="inputPassword"
+          />
         </div>
-
 
         <div className="mb-3">
           <label htmlFor="date" className="col-sm-2 col-form-label">
@@ -27,15 +44,23 @@ const FormEvents = () => {
           </label>
         </div>
         <div className="col-sm-10">
-          <input type="datetime-local" className="form-control" id="date" />
+          <input
+            onChange={() => setDate()}
+            type="datetime-local"
+            className="form-control"
+            id="date"
+          />
         </div>
-
 
         <div className="mb-3">
           <label htmlFor="country" className="col-sm-2 col-form-label">
             Country
           </label>
-          <select id="country" className="form-select">
+          <select
+            onChange={() => setCountry()}
+            id="country"
+            className="form-select"
+          >
             <option selected>Countries</option>
             <option value="Portekiz">Portugal</option>
             <option value="Ispanya">Spain</option>
@@ -44,6 +69,7 @@ const FormEvents = () => {
         </div>
         <div className="mb-3 form-check">
           <input
+            onChange={() => setRemember()}
             className="form-check-input"
             type="checkbox"
             value=""
