@@ -69,7 +69,7 @@ const FormEvents = () => {
         </div>
         <div className="mb-3 form-check">
           <input
-            onChange={() => setRemember()}
+            onChange={e => setRemember(e)}
             className="form-check-input"
             type="checkbox"
             value=""
