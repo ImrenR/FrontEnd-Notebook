@@ -19,15 +19,27 @@ const FormEvents = () => {
         <div className="col-sm-10">
           <input type="password" className="form-control" id="inputPassword" />
         </div>
+
+
+        <div className="mb-3">
+          <label htmlFor="date" className="col-sm-2 col-form-label">
+            Date
+          </label>
+        </div>
+        <div className="col-sm-10">
+          <input type="datetime-local" className="form-control" id="date" />
+        </div>
+
+
         <div className="mb-3">
           <label htmlFor="country" className="col-sm-2 col-form-label">
             Country
           </label>
           <select id="country" className="form-select">
             <option selected>Countries</option>
-            <option value="1">Portugal</option>
-            <option value="2">Spain</option>
-            <option value="3">Turkey</option>
+            <option value="Portekiz">Portugal</option>
+            <option value="Ispanya">Spain</option>
+            <option value="Turkiye">Turkey</option>
           </select>
         </div>
         <div className="mb-3 form-check">
