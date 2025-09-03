@@ -37,7 +37,7 @@ const DataStorage = () => {
        
 
         <button className="btn btn-danger m-2" onClick={()=> setVisible(!visible)}>
-       HIDE/SHOW
+       {visible ? "HIDE" : "SHOW"}
       </button>
 
 
