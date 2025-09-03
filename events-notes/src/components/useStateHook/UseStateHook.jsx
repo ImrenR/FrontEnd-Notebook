@@ -18,9 +18,6 @@
 //? https://react.dev/reference/react/hooks#state-hooks
 
 
-
-
-
 const UseStateHook = () => {
   let counter=0
   
@@ -42,3 +39,6 @@ const arttir = ()=> {
 }
 
 export default UseStateHook
+
+
+
