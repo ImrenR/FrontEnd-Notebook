@@ -15,6 +15,7 @@ const FormObject = () => {
 
       
       `);
+      setInfo({name: "", password: "", country: ""})
   };
 
   return (
