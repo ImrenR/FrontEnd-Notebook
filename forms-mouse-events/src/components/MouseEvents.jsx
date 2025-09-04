@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 //* Onmousemove olayı, fare işaretçisi div öğesinin üzerinde her hareket ettiğinde tetiklenir.
 
@@ -14,14 +14,22 @@ import { useState } from "react";
 
 const MouseEvents = () => {
   const [visible, setVisible] = useState(false);
-const [coordX, setCoordX] = useState("");
-const [coordY, setCoordY] = useState("");
-
+  const [coordX, setCoordX] = useState("");
+  const [coordY, setCoordY] = useState("");
 
   const handleDoubleClick = (e) => e.target.classList.toggle("bg-danger");
 
+  const handleMouseMove = (e) => {
+    //? mutlak koordinatlar
+    // console.log("X:", e.pageX);
+    // console.log("Y:", e.pageY);
+    // console.log("X:", e.clientX);
+    // console.log("Y:", e.clientY);
 
-
+    //? göreceli koordinatlar
+    setCoordX(e.nativeEvent.offsetX);
+    setCoordY(e.nativeEvent.offsetY);
+  };
 
   return (
     <div className="container text-center d-flex flex-column align-items-center mt-4">
@@ -34,7 +42,7 @@ const [coordY, setCoordY] = useState("");
       >
         onMouseOver & onMouseLeave
       </div>
-      {visible && <p className="text-danger">Mouse uzerimde</p>}
+      {visible && <p className="text-danger">Mouse üzerimde</p>}
       <div
         onDoubleClick={handleDoubleClick}
         id="todo-2"
@@ -42,16 +50,28 @@ const [coordY, setCoordY] = useState("");
       >
         onDoubleClick
       </div>
-      <div id="todo-3" className="bg-success text-light w-50 p-4 my-4">
+      <div
+        onMouseMove={handleMouseMove}
+        id="todo-3"
+        className="bg-success text-light w-50 p-4 my-4"
+      >
         <span>onMouseMove</span>
       </div>
-      <div id="todo-4" className="bg-success text-light w-50 p-4 my-4">
+      <div
+        onMouseOver={handleMouseMove}
+        id="todo-4"
+        className="bg-success text-light w-50 p-4 my-4"
+      >
         <span>onMouseOver</span>
       </div>
-      <div id="todo-5" className="bg-success text-light w-50 p-4 my-4">
+      <div
+        onMouseEnter={handleMouseMove}
+        id="todo-5"
+        className="bg-success text-light w-50 p-4 my-4"
+      >
         <span>onMouseEnter</span>
       </div>
-      X : {coordX} and Y: {coordY}
+      X: {coordX} and Y:{coordY}
     </div>
   );
 };
