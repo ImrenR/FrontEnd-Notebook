@@ -26,6 +26,7 @@ const FormEvents = () => {
             type="text"
             className="form-control"
             id="name"
+            value={name}
           />
         </div>
         <div className="mb-3">
@@ -39,6 +40,7 @@ const FormEvents = () => {
             type="password"
             className="form-control"
             id="inputPassword"
+            value={password}
           />
         </div>
 
@@ -53,6 +55,7 @@ const FormEvents = () => {
             type="datetime-local"
             className="form-control"
             id="date"
+            value={date}
           />
         </div>
 
@@ -64,6 +67,7 @@ const FormEvents = () => {
             onChange={() => setCountry()}
             id="country"
             className="form-select"
+            value={country}
           >
             <option selected>Countries</option>
             <option value="Portekiz">Portugal</option>
@@ -76,8 +80,10 @@ const FormEvents = () => {
             onChange={e => setRemember(e)}
             className="form-check-input"
             type="checkbox"
-            value=""
+            value={remember}
             id="checkChecked"
+         
+           
           />
           <label className="form-check-label" htmlFor="remember">
             Remember me
