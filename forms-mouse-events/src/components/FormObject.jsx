@@ -1,10 +1,10 @@
 const FormObject = () => {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
-  const [date, setDate] = useState("");
-  const [remember, setRemember] = useState(false);
-  const [country, setCountry] = useState("");
 
+  const [info, setInfo] = useState({name: "", password: "", country: ""})
+  const {name, password, country} = info
+  
+  const handleInfo =(e)=> setInfo({...info,[e.target.id]:e.target.value})
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -12,7 +12,7 @@ const FormObject = () => {
       name: ${name}
       password : ${password}
       country : ${country}
-      date : {date}
+
       
       `);
   };
@@ -28,7 +28,7 @@ const FormObject = () => {
             Name
           </label>
           <input
-            onChange={() => setName()}
+            onChange={handleInfo}
             type="text"
             className="form-control"
             id="name"
@@ -42,7 +42,7 @@ const FormObject = () => {
         </div>
         <div className="col-sm-10">
           <input
-            onChange={() => setPassword()}
+            onChange={handleInfo}
             type="password"
             className="form-control"
             id="inputPassword"
@@ -51,26 +51,11 @@ const FormObject = () => {
         </div>
 
         <div className="mb-3">
-          <label htmlFor="date" className="col-sm-2 col-form-label">
-            Date
-          </label>
-        </div>
-        <div className="col-sm-10">
-          <input
-            onChange={() => setDate()}
-            type="datetime-local"
-            className="form-control"
-            id="date"
-            value={date}
-          />
-        </div>
-
-        <div className="mb-3">
           <label htmlFor="country" className="col-sm-2 col-form-label">
             Country
           </label>
           <select
-            onChange={() => setCountry()}
+            onChange={handleInfo}
             id="country"
             className="form-select"
             value={country}
@@ -81,18 +66,7 @@ const FormObject = () => {
             <option value="Turkiye">Turkey</option>
           </select>
         </div>
-        <div className="mb-3 form-check">
-          <input
-            onChange={(e) => setRemember(e)}
-            className="form-check-input"
-            type="checkbox"
-            value={remember}
-            id="checkChecked"
-          />
-          <label className="form-check-label" htmlFor="remember">
-            Remember me
-          </label>
-        </div>
+
         <button type="submit" className="btn btn-primary">
           SUBMIT
         </button>
