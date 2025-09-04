@@ -7,12 +7,16 @@ const FormEvents = () => {
   const [remember, setRemember] = useState(false);
   const [country, setCountry] = useState("");
 
+
+  const handleSubmit = (e)=> {
+    e.preventDefault()
+  }
   return (
     <div className="mt-4 p-3">
       <div className="text-center">
         <h2>FORM EVENTS</h2>
       </div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
             Name
