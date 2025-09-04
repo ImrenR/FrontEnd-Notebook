@@ -10,7 +10,23 @@ const FormEvents = () => {
 
   const handleSubmit = (e)=> {
     e.preventDefault()
+
+    alert(`
+    name: ${name}
+    password : ${password}
+    country : ${country}
+    date : {date}
+    
+    `)
+
+    setName("")
+    setCountry("")
+    setDate("")
+    setPassword("")
+    setRemember("")
   }
+
+  
   return (
     <div className="mt-4 p-3">
       <div className="text-center">
