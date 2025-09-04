@@ -1,11 +1,13 @@
 import FormEvents from "./components/FormEvents"
+import FormObject from "./components/FormObject"
 
 function App() {
 
 
   return (
     <div className="App">
-      <FormEvents/>
+    {/*  <FormEvents/> */}
+    <FormObject/>
     </div>
     
   )
