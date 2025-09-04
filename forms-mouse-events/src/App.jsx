@@ -1,5 +1,7 @@
 import FormEvents from "./components/FormEvents"
 import FormObject from "./components/FormObject"
+import MouseEvents from "./components/MouseEvents"
+
 
 function App() {
 
@@ -7,7 +9,8 @@ function App() {
   return (
     <div className="App">
     {/*  <FormEvents/> */}
-    <FormObject/>
+   {/* <FormObject/>*/}
+  <MouseEvents/>
     </div>
     
   )
