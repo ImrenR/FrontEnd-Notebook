@@ -1,4 +1,14 @@
+
+import axios from "axios";
 const User = () => {
+
+const getUser =async ()=> {
+ const result = await axios.get("https://randomuser.me/api/")
+ console.log(result)
+}
+
+getUser();
+
   return (
   <div>
     <img src="" alt="" />
