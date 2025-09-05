@@ -22,6 +22,7 @@ const User = () => {
   };
 
   useEffect(() => {
+  //  setInterval(getUser, 1000)
     getUser();
   }, []); // api ya istek atma ve run once on mount //! fetch ile axios benzer //! async-await ile then-catch benzer
 
