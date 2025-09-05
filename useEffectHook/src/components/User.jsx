@@ -1,16 +1,34 @@
-
+import { useState, useEffect } from "react";
 import axios from "axios";
-const User = () => {
 
-const getUser =async ()=> {
-try{ const result = await axios.get("https://randomuser.me/api/")
- console.log(result.data.results)}
+
+const User = () => {
+ const [userData, setUserData] = useState()
+
+ const getUser = async()=> {
+ try{ 
+  const result = await axios.get("https://randomuser.me/api/");
+ setUserData(result.data.results[0])}
  catch (error){
   console.log(error)
  }
-}
+};
 
-getUser();
+useEffect(() => {
+  getUser();
+}, []) // api ya istek atma ve sonsuz donuden cikma
+
+// const getUser = ()=> {
+//  axios
+//  .get("https://randomuser.me/api/")
+//  .then((result)=>console.log(result.data.results[0]))
+//  .catch((error)=> console.log(error))
+//  }
+// }
+
+
+//! fetch ile axios benzer
+//! async-await ile then-catch benzer
 
   return (
   <div>
