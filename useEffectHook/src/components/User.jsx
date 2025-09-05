@@ -3,8 +3,11 @@ import axios from "axios";
 const User = () => {
 
 const getUser =async ()=> {
- const result = await axios.get("https://randomuser.me/api/")
- console.log(result)
+try{ const result = await axios.get("https://randomuser.me/api/")
+ console.log(result.data.results)}
+ catch (error){
+  console.log(error)
+ }
 }
 
 getUser();
