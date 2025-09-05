@@ -34,9 +34,9 @@ const UseEffectHooks = () => {
   const [counter, setCounter] = useState(0)
   return (
     <div className="container text-center">
-      <h1 className="text-danger">USEEFFECT METHODS</h1>
+      <h1 className="text-danger">UseEfect Method</h1>
       <h3>COUNT={counter}</h3>
-      <button  onClick={()=>setCounter(counter+ 1)} className="btn btn-info ">ARTTIR</button>
+      <button  onClick={()=>setCounter(counter+ 1)} className="btn btn-info ">INC</button>
     </div>
   );
 };
