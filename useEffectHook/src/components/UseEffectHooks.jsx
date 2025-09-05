@@ -27,16 +27,25 @@
 //*     //* componentWillUnmount code */
 //!   };
 //! }, []);
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const UseEffectHooks = () => {
+  const [counter, setCounter] = useState(0);
+  const [name, setName] = useState("Imren");
+  useEffect(() => {
+    console.log("calisti");
+  }, [counter]);
 
-
-  const [counter, setCounter] = useState(0)
   return (
     <div className="container text-center">
       <h1 className="text-danger">UseEfect Method</h1>
       <h3>COUNT={counter}</h3>
-      <button  onClick={()=>setCounter(counter+ 1)} className="btn btn-info ">INC</button>
+      <h4>{name}</h4>
+      <button onClick={() => setCounter(counter + 1)} className="btn btn-info ">
+        INC
+      </button>
+       <button onClick={() => setName("Nikola")} className="btn btn-bg-success">
+        BUTTON
+      </button>
     </div>
   );
 };
