@@ -31,9 +31,17 @@ import { useState, useEffect } from "react";
 const UseEffectHooks = () => {
   const [counter, setCounter] = useState(0);
   const [name, setName] = useState("Imren");
+  // useEffect(() => {
+  //   console.log("calisti");
+  // }, [counter]);
+
   useEffect(() => {
-    console.log("calisti");
-  }, [counter]);
+  
+    return () => {
+      console.log("4-unmounting")
+      console.log("eski uyeligi sonlandir"); // clean up
+    };
+  }, [name]);
 
   return (
     <div className="container text-center">
@@ -43,7 +51,7 @@ const UseEffectHooks = () => {
       <button onClick={() => setCounter(counter + 1)} className="btn btn-info ">
         INC
       </button>
-       <button onClick={() => setName("Nikola")} className="btn btn-bg-success">
+      <button onClick={() => setName("Nikola")} className="btn btn-bg-success">
         BUTTON
       </button>
     </div>
