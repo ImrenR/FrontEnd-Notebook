@@ -8,7 +8,7 @@ const AddTutorial = ({ getTutorial }) => {
     e.preventDefault();
     postTutorial({ title, description });
     setDescription("");
-    setTitle("")
+    setTitle("") // bunu etkin hale cevirmek icin value={} eklemek zorundayiz
     }
     
  
