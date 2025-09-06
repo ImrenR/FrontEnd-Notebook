@@ -3,45 +3,58 @@ import { MdOutlineDeleteForever } from "react-icons/md";
 
 const TutorialList = () => {
 
-const tutorials = () => [{
-  id:1,
- title: "Js",
- description: "Js is a programming language"
-},
-{
-  id:2,
- title: "React",
- description: "Js library for UI design"
-}]
-
+  const tutorials =  [
+    {
+      id: 1,
+      title: "Js",
+      description: "Js is a programming language",
+    },
+    {
+      id: 2,
+      title: "React",
+      description: "Js library for UI design",
+    },
+  ];
 
   return (
-
-
-  <div className="container mt-4">
- <table class="table">
+    <div className="container mt-4">
+      <table className="table">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col" className="text-center">Edit</th>
+            <th scope="col">Title</th>
+            <th scope="col">Description</th>
+            <th scope="col" className="text-center">
+              Edit
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td className="text-center text-nowrap">
-              <CiEdit type="button" size={20} className="text-warning"/>
-              <MdOutlineDeleteForever type="button" size={20} className="text-danger"/>
-
-              </td>
-          </tr>
+          {tutorials.map((item) => {
+            const { id, title, description } = item;
+            return (
+              <tr key={id}>
+                <th scope="row">{id}</th>
+                <td>{title}</td>
+                <td>{description}</td>
+                <td className="text-center text-nowrap">
+                <button> <CiEdit type="button" size={20} className="text-warning" />
+                 </button> 
+                 <button>
+                  <MdOutlineDeleteForever
+                    type="button"
+                    size={20}
+                    className="text-danger"
+                  />
+                  </button>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
-  </div>)
-}
+    </div>
+  );
+};
 
-export default TutorialList
+export default TutorialList;
