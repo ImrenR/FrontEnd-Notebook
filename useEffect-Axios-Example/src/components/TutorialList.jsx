@@ -10,7 +10,7 @@ const TutorialList = ({ tutorials, getTutorial }) => {
       console.log(error);
     } finally {
       getTutorial();
-    }
+    } // burada on yuz guncellenir
   };
   // const tutorials =  [
   //   {
