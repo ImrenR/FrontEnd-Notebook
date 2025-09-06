@@ -3,7 +3,16 @@ import { MdOutlineDeleteForever } from "react-icons/md";
 
 const TutorialList = () => {
 
-
+const tutorials = () => [{
+  id:1,
+ title: "Js",
+ description: "Js is a programming language"
+},
+{
+  id:2,
+ title: "React",
+ description: "Js library for UI design"
+}]
 
 
   return (
@@ -24,7 +33,7 @@ const TutorialList = () => {
             <th scope="row">1</th>
             <td>Mark</td>
             <td>Otto</td>
-            <td className="">
+            <td className="text-center text-nowrap">
               <CiEdit type="button" size={20} className="text-warning"/>
               <MdOutlineDeleteForever type="button" size={20} className="text-danger"/>
 
