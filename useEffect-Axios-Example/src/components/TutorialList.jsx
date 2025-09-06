@@ -1,8 +1,10 @@
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
 
-const TutorialList = ({tutorials}) => {
-
+const TutorialList = ({ tutorials }) => {
+  const deleteTutorial = (id) => {
+    console.log(id);
+  };
   // const tutorials =  [
   //   {
   //     id: 1,
@@ -38,14 +40,17 @@ const TutorialList = ({tutorials}) => {
                 <td>{title}</td>
                 <td>{description}</td>
                 <td className="text-center text-nowrap">
-                <button> <CiEdit type="button" size={20} className="text-warning" />
-                 </button> 
-                 <button>
-                  <MdOutlineDeleteForever
-                    type="button"
-                    size={20}
-                    className="text-danger"
-                  />
+                  <button>
+                    {" "}
+                    <CiEdit type="button" size={20} className="text-warning" />
+                  </button>
+                  <button>
+                    <MdOutlineDeleteForever
+                      type="button"
+                      size={20}
+                      className="text-danger"
+                      onClick={() => deleteTutorial(id)}
+                    />
                   </button>
                 </td>
               </tr>
