@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <div>
       <AddTutorial />
-      <TutorialList />
+      <TutorialList tutorials = {tutorials} />
     </div>
   );
 };

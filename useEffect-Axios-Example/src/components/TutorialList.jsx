@@ -1,20 +1,20 @@
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
 
-const TutorialList = () => {
+const TutorialList = ({tutorials}) => {
 
-  const tutorials =  [
-    {
-      id: 1,
-      title: "Js",
-      description: "Js is a programming language",
-    },
-    {
-      id: 2,
-      title: "React",
-      description: "Js library for UI design",
-    },
-  ];
+  // const tutorials =  [
+  //   {
+  //     id: 1,
+  //     title: "Js",
+  //     description: "Js is a programming language",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "React",
+  //     description: "Js library for UI design",
+  //   },
+  // ];
 
   return (
     <div className="container mt-4">
