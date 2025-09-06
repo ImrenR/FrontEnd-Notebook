@@ -1,5 +1,16 @@
+
+
+
 const AddTutorial = () => {
-  return <div>AddTutorial</div>
+  return (
+  <div>
+   <div>
+    <p>Add Your Tutorial</p>
+    
+   </div>
+
+  </div>
+  )
 }
 
 export default AddTutorial
