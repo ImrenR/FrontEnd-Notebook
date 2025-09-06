@@ -1,6 +1,7 @@
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
 import axios from 'axios';
+import EditTutorial from "./EditTutorial";
 const TutorialList = ({ tutorials, getTutorial }) => {
 
   const deleteTutorial =async (id) => {
@@ -10,7 +11,7 @@ const TutorialList = ({ tutorials, getTutorial }) => {
       console.log(error);
     } finally {
       getTutorial();
-    } // burada on yuz guncellenir
+    } // burada on yuz guncellenir.
   };
   // const tutorials =  [
   //   {
@@ -49,7 +50,10 @@ const TutorialList = ({ tutorials, getTutorial }) => {
                 <td className="text-center text-nowrap">
                   <button>
                     {" "}
-                    <CiEdit type="button" size={20} className="text-warning" />
+                    <CiEdit 
+                    type="button" 
+                    size={20} 
+                    className="text-warning" />
                   </button>
                   <button>
                     <MdOutlineDeleteForever
@@ -65,6 +69,7 @@ const TutorialList = ({ tutorials, getTutorial }) => {
           })}
         </tbody>
       </table>
+      <EditTutorial />
     </div>
   );
 };
