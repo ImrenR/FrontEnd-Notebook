@@ -8,7 +8,7 @@ const AddTutorial = ({ getTutorial }) => {
     e.preventDefault();
     postTutorial({ title, description });
   };
-  
+
   const postTutorial = async (newTutorial) => {
     try {
       await axios.post(import.meta.env.VITE_APP_URL, newTutorial);
@@ -32,6 +32,7 @@ const AddTutorial = ({ getTutorial }) => {
             class="form-control"
             id="title"
             placeholder="Enter your title"
+            value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
@@ -44,6 +45,7 @@ const AddTutorial = ({ getTutorial }) => {
             id="exampleFormControlTextarea1"
             rows="2"
             placeholder="Enter your description"
+            value={description}
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
