@@ -7,7 +7,11 @@ const AddTutorial = ({ getTutorial }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     postTutorial({ title, description });
-  };
+    setDescription("");
+    setTitle("")
+    }
+    
+ 
 
   const postTutorial = async (newTutorial) => {
     try {
@@ -55,6 +59,6 @@ const AddTutorial = ({ getTutorial }) => {
       </form>
     </div>
   );
-};
+ };
 
 export default AddTutorial;
