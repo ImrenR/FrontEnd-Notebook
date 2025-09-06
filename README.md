@@ -4,16 +4,6 @@
 A collection of frontend practice projects built with HTML, CSS, and Vanilla JavaScript.
 The goal of this repository is to recap core web development concepts by building small, hands-on projects without relying on external frameworks or libraries.
 
-## Project Structure
-```FrontendRecap/ 
-│── flex/  
-│── flexBoxProject/    
-│── JavaScript/     
-│── mediaQuery/        
-│── Project Wallet App/          
-│── Project2- to-do List/         
-│── README.md
-```
 ## Projects
 
 Flex & FlexboxProject → Practice using CSS Flexbox for layouts.
@@ -26,6 +16,7 @@ Project →(Wallet App) A simple task manager built with pure JavaScript, HTML, 
 
 Project2 (To-Do List App) → A simple task manager built with pure JavaScript, HTML, and CSS.
 
+And will be updated more ...
 ## How to Run
 
 Clone the repository:
@@ -49,7 +40,7 @@ A practice space for building small, functional projects without frameworks.
 
 ## Future Plans
 
-Add more JavaScript DOM projects.
+Add more JavaScript DOM and React JS ( with Vite) projects.
 
 Expand responsive design examples.
 
