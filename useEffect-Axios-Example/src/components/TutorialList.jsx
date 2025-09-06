@@ -1,11 +1,14 @@
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
-import axios from 'axios';
+import axios from "axios";
 import EditTutorial from "./EditTutorial";
+import { useState } from "react";
+
 const TutorialList = ({ tutorials, getTutorial }) => {
 
-  const deleteTutorial =async (id) => {
-   try {
+  const [editdata,setEditData] = useState("")
+  const deleteTutorial = async (id) => {
+    try {
       await axios.delete(`${import.meta.env.VITE_APP_URL}${id}/`);
     } catch (error) {
       console.log(error);
@@ -50,10 +53,14 @@ const TutorialList = ({ tutorials, getTutorial }) => {
                 <td className="text-center text-nowrap">
                   <button>
                     {" "}
-                    <CiEdit 
-                    type="button" 
-                    size={20} 
-                    className="text-warning" />
+                    <CiEdit
+                      type="button"
+                      size={20}
+                      className="text-warning"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onClick={()=> setEditData(item)}
+                    />
                   </button>
                   <button>
                     <MdOutlineDeleteForever
@@ -69,7 +76,7 @@ const TutorialList = ({ tutorials, getTutorial }) => {
           })}
         </tbody>
       </table>
-      <EditTutorial />
+      <EditTutorial editData={editdata} />
     </div>
   );
 };
