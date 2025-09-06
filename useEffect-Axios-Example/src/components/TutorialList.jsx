@@ -1,7 +1,7 @@
 import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
-
-const TutorialList = ({ tutorials }) => {
+import axios from 'axios';
+const TutorialList = ({ tutorials, getTutorial }) => {
 
   const deleteTutorial =async (id) => {
    try {
