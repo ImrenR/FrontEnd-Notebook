@@ -2,8 +2,15 @@ import { CiEdit } from "react-icons/ci";
 import { MdOutlineDeleteForever } from "react-icons/md";
 
 const TutorialList = ({ tutorials }) => {
-  const deleteTutorial = (id) => {
-    console.log(id);
+
+  const deleteTutorial =async (id) => {
+   try {
+      await axios.delete(`${import.meta.env.VITE_APP_URL}${id}/`);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTutorial();
+    }
   };
   // const tutorials =  [
   //   {

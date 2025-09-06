@@ -1,24 +1,23 @@
 import { useState } from "react";
 import axios from "axios";
-const AddTutorial = ({getTutorial}) => {
+const AddTutorial = ({ getTutorial }) => {
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
-  const [title, setTitle] = useState("")
-  const [description, setDescription] = useState("")
-
-  const handleSubmit=(e)=> {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    postTutorial({title,description})
-  }; 
-  const postTutorial = async(newTutorial)=> {
-try {
-    await  axios.post(import.meta.env.VITE_APP_URL,newTutorial )
-    
-} catch (error) {
-  console.log(error)
-}finally{
-getTutorial();
-}
-  }
+    postTutorial({ title, description });
+  };
+  
+  const postTutorial = async (newTutorial) => {
+    try {
+      await axios.post(import.meta.env.VITE_APP_URL, newTutorial);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTutorial();
+    }
+  };
 
   return (
     <div>
@@ -33,7 +32,7 @@ getTutorial();
             class="form-control"
             id="title"
             placeholder="Enter your title"
-            onChange={(e)=>setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
           />
         </div>
         <div className="mb-3">
@@ -45,14 +44,13 @@ getTutorial();
             id="exampleFormControlTextarea1"
             rows="2"
             placeholder="Enter your description"
-            onChange={(e)=>setDescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
       </form>
-     
     </div>
   );
 };
