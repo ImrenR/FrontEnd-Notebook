@@ -76,7 +76,7 @@ const TutorialList = ({ tutorials, getTutorial }) => {
           })}
         </tbody>
       </table>
-      <EditTutorial editData={editdata} />
+      <EditTutorial editData={editdata} getTutorial = {getTutorial}/>
     </div>
   );
 };

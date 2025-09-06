@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const EditTutorial = ({editData}) => {
+const EditTutorial = ({ editData , getTutorial}) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = (e)=> {
-e.preventDefault();
-  }
+  useEffect(() => {
+    setTitle(editData.title);
+    setDescription(editData.description);
+  }, [editData]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    editTutorial({title, description, id});
+};
+     const editTutorial = async (tutorial) => {
+    try {
+      await axios.put(`${import.meta.env.VITE_APP_URL}${editData.id}/`, tutorial);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      getTutorial();
+    } // burada on yuz guncellenir.
+  };
+  
   return (
     <>
       {/* Modal */}
@@ -65,11 +81,9 @@ e.preventDefault();
               </form>
             </div>
             <div className="modal-footer">
-              <button 
-              type="button" 
+              <button type="button" 
               className="btn btn-primary">
-             
-              Submit
+                Submit
               </button>
             </div>
           </div>
