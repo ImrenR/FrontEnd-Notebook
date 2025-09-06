@@ -1,11 +1,22 @@
-import AddTutorial from "../components/AddTutorial"
-import TutorialList from "../components/TutorialList"
-
+import AddTutorial from "../components/AddTutorial";
+import TutorialList from "../components/TutorialList";
+import axios from "axios";
 const Home = () => {
-  return <div>
-    <AddTutorial/>
-    <TutorialList/>
-  </div>
-}
+  const getTutorial = async () => {
+    const url = "https://tutorial-api.fullstack.clarusway.com/";
 
-export default Home
+    axios
+      .get(url)
+      .then((res) => console.log(res.data))
+      .catch((error) => console.log(error));
+  };
+  getTutorial();
+  return (
+    <div>
+      <AddTutorial />
+      <TutorialList />
+    </div>
+  );
+};
+
+export default Home;
