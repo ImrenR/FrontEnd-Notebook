@@ -5,29 +5,17 @@ import EditTutorial from "./EditTutorial";
 import { useState } from "react";
 
 const TutorialList = ({ tutorials, getTutorial }) => {
+  const [editData, setEditData] = useState({}); // start as object
 
-  const [editdata,setEditData] = useState("")
   const deleteTutorial = async (id) => {
     try {
       await axios.delete(`${import.meta.env.VITE_APP_URL}${id}/`);
     } catch (error) {
-      console.log(error);
+      console.error("Error deleting tutorial:", error);
     } finally {
       getTutorial();
-    } // burada on yuz guncellenir.
+    }
   };
-  // const tutorials =  [
-  //   {
-  //     id: 1,
-  //     title: "Js",
-  //     description: "Js is a programming language",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "React",
-  //     description: "Js library for UI design",
-  //   },
-  // ];
 
   return (
     <div className="container mt-4">
@@ -38,7 +26,7 @@ const TutorialList = ({ tutorials, getTutorial }) => {
             <th scope="col">Title</th>
             <th scope="col">Description</th>
             <th scope="col" className="text-center">
-              Edit
+              Actions
             </th>
           </tr>
         </thead>
@@ -51,24 +39,24 @@ const TutorialList = ({ tutorials, getTutorial }) => {
                 <td>{title}</td>
                 <td>{description}</td>
                 <td className="text-center text-nowrap">
-                  <button>
-                    {" "}
-                    <CiEdit
-                      type="button"
-                      size={20}
-                      className="text-warning"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      onClick={()=> setEditData(item)}
-                    />
+                  {/* Edit button */}
+                  <button
+                    type="button"
+                    className="btn btn-link p-0 me-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    onClick={() => setEditData(item)}
+                  >
+                    <CiEdit size={20} className="text-warning" />
                   </button>
-                  <button>
-                    <MdOutlineDeleteForever
-                      type="button"
-                      size={20}
-                      className="text-danger"
-                      onClick={() => deleteTutorial(id)}
-                    />
+
+                  {/* Delete button */}
+                  <button
+                    type="button"
+                    className="btn btn-link p-0"
+                    onClick={() => deleteTutorial(id)}
+                  >
+                    <MdOutlineDeleteForever size={20} className="text-danger" />
                   </button>
                 </td>
               </tr>
@@ -76,7 +64,9 @@ const TutorialList = ({ tutorials, getTutorial }) => {
           })}
         </tbody>
       </table>
-      <EditTutorial editData={editdata} getTutorial = {getTutorial}/>
+
+      {/* Modal for editing */}
+      <EditTutorial editData={editData} getTutorial={getTutorial} />
     </div>
   );
 };
