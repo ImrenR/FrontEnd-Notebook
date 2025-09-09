@@ -82,8 +82,9 @@ section#about{
 
 }
 
-.image-container{
-  width: 200px;
+.container img{
+  width: 300px;
   border-radius: 2rem;
   margin-top: 2rem;
 }
+
