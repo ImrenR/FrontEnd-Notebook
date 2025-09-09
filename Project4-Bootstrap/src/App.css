@@ -1,1 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius&family=DynaPuff:wght@400..700&family=Fontdiner+Swanky&family=Monsieur+La+Doulaise&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Twinkle+Star&display=swap");
 
+:root {
+  --primary-color: #bc6c25;
+  --secondary-color: #4d3822;
+  --hover-color: #e76f51;
+  --section-color: #b78752;
+}
+*{
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+.navbar {
+position:fixed;
+z-index: 5;
+
+}
+.navbar .container{
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.navbar .nav-link:hover{
+  color:var(--primary-color) !important;
+}
+
+
+.carousel-item{
+  height: 100vh;
+
+}
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption .btn {
+  background-color: var(--primary-color);
+  border:none;
+  width: 10rem;
+  white-space: nowrap;
+  color:white ;
+}
+
+  .carousel-caption .btn:first-child {
+  background-color: transparent;
+}
+
+.carousel-caption .btn:first-child:hover {
+background-color: white ;
+color: black; 
+}
