@@ -69,3 +69,21 @@ color: black;
   transform: translate(-50%, -50%) rotate(45deg);
  background-color: rgba(0, 0, 0, 0.7);
 }
+
+.carousel-indicators button {
+background-color: var(--primary-color) !important;
+}
+
+
+section#about{
+  background-color: var(--secondary-color);
+  height: 600px;
+  color:white;
+
+}
+
+.image-container{
+  width: 200px;
+  border-radius: 2rem;
+  margin-top: 2rem;
+}

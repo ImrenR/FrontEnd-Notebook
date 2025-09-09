@@ -75,7 +75,7 @@ const CoffeeShop = () => {
       </nav>
       {/* Carousel */}
       <div id="carouselExampleIndicators" className="carousel slide">
-        <div className="carousel-indicators">
+        <div className="carousel-indicators w-100 p-5 g-3">
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
@@ -101,7 +101,6 @@ const CoffeeShop = () => {
           <div className="carousel-item active">
             <img src="/slider1.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-             
               <div className="hero">
                 <em>Welcome to the our coffeeshop</em>
                 <h1 className="display-1 fw-bolder">Cafe Shop</h1>
@@ -117,32 +116,46 @@ const CoffeeShop = () => {
               </div>
 
               <div className="black rounded-5"></div>
-              
             </div>
-
           </div>
           <div className="carousel-item">
             <img src="/slider2.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <em>Welcome to the our coffeeshop</em>
-              <h1 className="display-1">Cafe Shop</h1>
-              <p>your favorite coffee daily lives..</p>
-              <div className="btn-container">
-                <button>Our Story</button>
-                <button>Check Menu</button>
+              <div className="hero">
+                <em>Welcome to the our coffeeshop</em>
+                <h1 className="display-1 fw-bolder">Cafe Shop</h1>
+                <p className="fs-5">your favorite coffee daily lives..</p>
+                <div className="btn-container">
+                  <button className="btn rounded-pill fw-bold me-3">
+                    Our Story
+                  </button>
+                  <button className="btn rounded-pill fw-bold me-3">
+                    Check Menu
+                  </button>
+                </div>
               </div>
+
+              <div className="black rounded-5"></div>
             </div>
           </div>
           <div className="carousel-item">
             <img src="/slider3.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <em>Welcome to the our coffeeshop</em>
-              <h1 className="display-1">Cafe Shop</h1>
-              <p>your favorite coffee daily lives..</p>
-              <div className="btn-container">
-                <button>Our Story</button>
-                <button>Check Menu</button>
+              <div className="hero">
+                <em>Welcome to the our coffeeshop</em>
+                <h1 className="display-1 fw-bolder">Cafe Shop</h1>
+                <p className="fs-5">your favorite coffee daily lives..</p>
+                <div className="btn-container">
+                  <button className="btn rounded-pill fw-bold me-3">
+                    Our Story
+                  </button>
+                  <button className="btn rounded-pill fw-bold me-3">
+                    Check Menu
+                  </button>
+                </div>
               </div>
+
+              <div className="black rounded-5"></div>
             </div>
           </div>
         </div>
@@ -165,6 +178,30 @@ const CoffeeShop = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
+
+      {/* About Us */}
+      <section id="about" className="py-5">
+        <h1>About Us</h1>
+        <div className="container">
+          <div className="row">
+            <div className="col  col-sm-12 col-md-6">
+              <div className="image-container">
+                <img src="/about.jpg" alt="" />
+              </div>
+              <div className="about-info">
+                <h4>We start since 2019</h4>
+                <p>Best in Dublin</p>
+              </div>
+            </div>
+            <div className="col  col-sm-12 col-md-6 my-5">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Provident necessitatibus molestiae nulla dolore ex consequuntur
+              non explicabo! Excepturi fugiat labore accusamus, sequi doloribus,
+              deleniti iste, voluptate sunt cumque laboriosam illo!
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
