@@ -1,5 +1,3 @@
-
-
 const CoffeeShop = () => {
   const employees = [
     {
@@ -30,11 +28,7 @@ const CoffeeShop = () => {
       <nav className="navbar navbar-expand-lg">
         <div className="container fw-bold rounded-5">
           <a className="navbar-brand" href="#">
-            <img 
-            src="/coffee-cup.png"
-              
-             style={{width: "50px"}}
-            />
+            <img src="/coffee-cup.png" style={{ width: "50px" }} />
           </a>
 
           <button
@@ -52,7 +46,11 @@ const CoffeeShop = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link text-white active" aria-current="page" href="#">
+                <a
+                  className="nav-link text-white active"
+                  aria-current="page"
+                  href="#"
+                >
                   Home
                 </a>
               </li>
@@ -101,27 +99,30 @@ const CoffeeShop = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img
-            src="/slider1.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src="/slider1.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <em>Welcome to the our coffeeshop</em>
-              <h1 className="display-1 fw-bolder">Cafe Shop</h1>
-              <p className="fs-5">your favorite coffee daily lives..</p>
-              <div className="btn-container">
-                <button className="btn rounded-pill fw-bold me-3">Our Story</button>
-                <button className="btn rounded-pill fw-bold me-3">Check Menu</button>
+             
+              <div className="hero">
+                <em>Welcome to the our coffeeshop</em>
+                <h1 className="display-1 fw-bolder">Cafe Shop</h1>
+                <p className="fs-5">your favorite coffee daily lives..</p>
+                <div className="btn-container">
+                  <button className="btn rounded-pill fw-bold me-3">
+                    Our Story
+                  </button>
+                  <button className="btn rounded-pill fw-bold me-3">
+                    Check Menu
+                  </button>
+                </div>
               </div>
+
+              <div className="black rounded-5"></div>
+              
             </div>
+
           </div>
           <div className="carousel-item">
-            <img
-            src="/slider2.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src="/slider2.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <em>Welcome to the our coffeeshop</em>
               <h1 className="display-1">Cafe Shop</h1>
@@ -133,11 +134,7 @@ const CoffeeShop = () => {
             </div>
           </div>
           <div className="carousel-item">
-            <img
-            src="/slider3.jpg"
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src="/slider3.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <em>Welcome to the our coffeeshop</em>
               <h1 className="display-1">Cafe Shop</h1>

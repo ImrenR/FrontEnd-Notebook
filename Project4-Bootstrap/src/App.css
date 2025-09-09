@@ -13,6 +13,7 @@
 .navbar {
 position:fixed;
 z-index: 5;
+width:100%;
 
 }
 .navbar .container{
@@ -47,4 +48,24 @@ z-index: 5;
 .carousel-caption .btn:first-child:hover {
 background-color: white ;
 color: black; 
+}
+
+.carousel-caption{
+  bottom: 40%;
+}
+
+.hero{
+ position: relative;
+ z-index: 3;
+
+}
+
+.black {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+ background-color: rgba(0, 0, 0, 0.7);
 }
