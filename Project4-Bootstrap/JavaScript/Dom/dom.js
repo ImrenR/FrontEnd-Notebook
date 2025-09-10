@@ -1,0 +1,99 @@
+const myInput = document.getElementById("btn");
+console.log(myInput);
+
+myInput.value = 'SUBMIT';
+
+// GETELEMENTBYTAGNAME //
+
+const allLi = document.getElementsByTagName('li');
+
+console.log(allLi); // HTML Collection
+
+console.log(allLi[0].textContent);
+
+allLi[2].textContent = "javascript";
+
+//! array-like grubunda direkt array methodlari burada kullanilamaz.
+//? Array like gruplarini nasil array a cevirebiliriz. spread le
+
+//? SPREAD :
+
+const arrAllLi = [...allLi];
+console.log(arrAllLi)
+
+arrAllLi.forEach((li)=> li.style.color = 'red')
+
+
+//? Array.from ()
+
+console.log(Array.from(allLi))
+Array.from(allLi).map((li)=>li.style.background= "pink")
+//!------------------------------------------------------------------------------!//
+
+//** GETELEMENTBYCLASSNAME */
+
+const myClassName = document.getElementsByClassName("list");
+console.log(myClassName);
+
+myClassName[0].innerText = "HTML DERSLERI";
+
+
+document.getElementsByClassName("item-list")[0].style.color = 'blue';
+
+
+//** QUERYSELECTOR */
+
+//! Query selector ile id, class , tag secilebilir. 
+//! Bu akista gordugu ilk elementi secer.
+
+//? id ile secmek icin 
+
+console.log(document.querySelector('#btn'));
+
+//? class ile secmek icin 
+
+console.log(document.querySelector('.item-list'))
+
+//? tag ile secmek icin 
+
+console.log(document.querySelector('li')) // ilk gordugu elementi secer
+
+const myItem = document.querySelector('main section.item-list h3')
+
+//** QUERYSELECTORALL */
+
+//! Bir nodelist dondurur. Nodelist dahili olarak bir foreach barindirir.
+
+//** TRAVERSING DOM */
+
+//? Bir HTML elementi uzerinden baska elementleri secmeye
+//? DOM traversing denilir. OZellikle dinamik olarak degisen
+//? (silme veya ekleme gibi) HTML elemanlarini secerken gerekli olabilir
+
+//? SEcme islemi 3 yolla yapilabilir
+//? Yukari yonde (parent)
+//? asagi yonde (children)
+//? Yatay yonde (sbling)
+
+//** Yukari yonde Traverse */
+//! parentElement, parentNode
+
+const h2 =document.getElementById('add-new-item');
+console.log(h2)
+console.log(h2.parentElement) // section.add-item
+console.log(h2.parentElement.parentElement.parentElement)
+
+//* Asagi Yonde Traverse */
+//? Children, firstElementChild, lastElementChild
+//!parentElement in tam tersi
+
+
+const section = document.getElementById('section.add-item')
+console.log(section); 
+console.log(section.firstElementChild) // text yazi iceren htl elementlerinin yazisina erisir.
+
+//** Yatay yonde traverse */
+//! nextElementSibling, previousElementSibling
+
+
+console.log(allLi.nextElementSbling.innerText)
