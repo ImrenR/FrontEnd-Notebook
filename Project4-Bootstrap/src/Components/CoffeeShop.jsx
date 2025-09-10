@@ -1,7 +1,7 @@
 const CoffeeShop = () => {
   const employees = [
     {
-      name1: "Melanie",
+      name1: "Alex",
       lastName: "Costa",
       dateOfBirth: "1987",
       salary: 25000,
@@ -9,7 +9,7 @@ const CoffeeShop = () => {
       img:"/our-team-1.jpg",
     },
     {
-      name1: "Ebru",
+      name1: "Luis",
       lastName: "Jovan",
       dateOfBirth: "1989",
       salary: 2000,
@@ -25,7 +25,7 @@ const CoffeeShop = () => {
        img:"/our-team-3.jpg",
     },
     {
-      name1: "Mina",
+      name1: "Rua",
       lastName: "Pinto",
       dateOfBirth: "2000",
       salary: 2300,
@@ -41,12 +41,12 @@ const CoffeeShop = () => {
       img:"/our-team-5.jpg",
     },
     {
-      name1: "Carla",
+      name1: "Joao",
       lastName: "Pinto",
       dateOfBirth: "2000",
       salary: 2300,
       job: "developer",
-      img:"/our-team-5.jpg",
+      img:"/our-team-6.jpg",
     },
   ];
 
@@ -230,7 +230,7 @@ const CoffeeShop = () => {
           </div>
         </div>
       </section>
-
+      {/* Meet People */}
     <div className="people">
       <div className="people-header text-center text-white">
         <em>Creative Barista</em>
@@ -259,7 +259,7 @@ const CoffeeShop = () => {
         </div>
       </div>
     </div>
-
+      {/*  */}
     </div>
 
 
