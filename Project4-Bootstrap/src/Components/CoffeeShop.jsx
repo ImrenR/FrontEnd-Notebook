@@ -6,6 +6,7 @@ const CoffeeShop = () => {
       dateOfBirth: "1987",
       salary: 25000,
       job: "developer",
+      img:"/our-team-1.jpg",
     },
     {
       name1: "Ebru",
@@ -13,6 +14,7 @@ const CoffeeShop = () => {
       dateOfBirth: "1989",
       salary: 2000,
       job: "developer",
+       img:"/our-team-2.jpg"
     },
     {
       name1: "Muge",
@@ -20,6 +22,31 @@ const CoffeeShop = () => {
       dateOfBirth: "2000",
       salary: 2300,
       job: "developer",
+       img:"/our-team-3.jpg",
+    },
+    {
+      name1: "Mina",
+      lastName: "Pinto",
+      dateOfBirth: "2000",
+      salary: 2300,
+      job: "developer",
+       img:"/our-team-4.jpg",
+    },
+    {
+      name1: "Marta",
+      lastName: "Pinto",
+      dateOfBirth: "2000",
+      salary: 2300,
+      job: "developer",
+      img:"/our-team-5.jpg",
+    },
+    {
+      name1: "Carla",
+      lastName: "Pinto",
+      dateOfBirth: "2000",
+      salary: 2300,
+      job: "developer",
+      img:"/our-team-5.jpg",
     },
   ];
 
@@ -211,12 +238,12 @@ const CoffeeShop = () => {
       </div>
       <div className="container">
       <div className="row d-flex justify-content-center align-item-center">
-        <div className="col col-sm-12 col-md-6">
+        <div className="col col-xs-12 col-sm-6 col-m-4">
           {employees.map((item)=> {
-          const {name1, lastName, dateOfBirth, salary, job} =item
+          const {name1,img, lastName, dateOfBirth, salary, job} =item
            return (
             <div className="card">
-              <img src="" alt="" />
+              <img src={img} alt="" />
               <div className="card-body">
               <h2 className="lead">{name1}</h2>
               <h3 className="fs-6 text-muted text-capitalize">{job}</h3>
