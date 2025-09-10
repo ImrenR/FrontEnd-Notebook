@@ -447,7 +447,75 @@ const CoffeeShop = () => {
         </div>
       </section>
 
-      <form action=""></form>
+      <section className="contact">
+        <div className="contact-form">
+          <h1 className="text-center text-white">CONTACT</h1>
+        </div>
+        <div className="container text-white">
+          <div className="row ">
+            <div className="col-12 col-md-6">
+              <form className="row g-3 ">
+                <div className="col-md-6">
+                  <label htmlFor="inputname4" className="form-label">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputname4"
+                    placeholder="Imren"
+                  />
+                </div>
+                <div className="col-md-6">
+                  <label htmlFor="inputEmail4" className="form-label">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="inputEmail4"
+                    placeholder="imrenrahbay@gmail.com"
+                  />
+                </div>
+
+                <div className="col-12">
+                  <label htmlFor="inputAddress" className="form-label">
+                    Address
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputAddress"
+                    placeholder="Porto"
+                  />
+                </div>
+
+                <div className="form-floating">
+                  <textarea
+                    className="form-control"
+                    id="floatingTextarea"
+                    placeholder="Enter your comments"
+                    style={{ height: "100px" }}
+                  ></textarea>
+                 
+                </div>
+              </form>
+            </div>
+            <div className="col-12 col-lg-6">
+              <iframe
+              className="rounded-5"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192238.4603445828!2d-8.786417076841914!3d41.162331075674906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2464e28c5e9a77%3A0x7f08405ee8a1e44f!2sLivraria%20Lello!5e0!3m2!1spt-PT!2spt!4v1757532276642!5m2!1spt-PT!2spt"
+                width="100%"
+                height="450"
+                style={{border:0}}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
