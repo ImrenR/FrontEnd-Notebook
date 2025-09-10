@@ -203,7 +203,38 @@ const CoffeeShop = () => {
           </div>
         </div>
       </section>
+
+    <div className="people">
+      <div className="people-header text-center text-white">
+        <em>Creative Barista</em>
+        <h2>Meet People</h2>
+      </div>
+      <div className="container">
+      <div className="row d-flex justify-content-center align-item-center">
+        <div className="col col-sm-12 col-md-6">
+          {employees.map((item)=> {
+          const {name1, lastName, dateOfBirth, salary, job} =item
+           return (
+            <div className="card">
+              <img src="" alt="" />
+              <div className="card-body">
+              <h2 className="lead">{name1}</h2>
+              <h3 className="fs-6 text-muted text-capitalize">{job}</h3>
+              <p className="blockquote">Some quick example text tp build on the card title and make up the bulk of the cads content.</p>
+              <footer></footer>
+              </div>
+            </div>
+            
+           )
+          })}
+          </div>
+        </div>
+      </div>
     </div>
+
+    </div>
+
+
   );
 };
 

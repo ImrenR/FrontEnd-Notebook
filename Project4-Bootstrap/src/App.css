@@ -96,3 +96,10 @@ section#about {
     rgba(188, 108, 37, 0.5)
   );
 }
+
+.people {
+  background-color: var(--section-color);
+}
+.people .container{
+  background-color: var(--secondary-color);
+}
