@@ -102,4 +102,14 @@ section#about {
 }
 .people .container{
   background-color: var(--secondary-color);
+  padding: 1rem;
 }
+
+.people .card{
+  background-color: var(--primary-color);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.people .card:hover {
+    transform:scale(1.05);
+  }

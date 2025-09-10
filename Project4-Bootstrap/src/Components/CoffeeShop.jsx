@@ -237,24 +237,25 @@ const CoffeeShop = () => {
         <h2>Meet People</h2>
       </div>
       <div className="container">
-      <div className="row d-flex justify-content-center align-item-center">
-        <div className="col col-xs-12 col-sm-6 col-m-4">
-          {employees.map((item)=> {
+      <div className="row d-flex justify-content-center align-items-center">
+         {employees.map((item, index)=> {
           const {name1,img, lastName, dateOfBirth, salary, job} =item
            return (
+        <div  key={index} className="col col-xs-12 col-sm-6 col-m-4 col-lg-3 col-xl-2">
+         
             <div className="card">
               <img src={img} alt="" />
               <div className="card-body">
-              <h2 className="lead">{name1}</h2>
+              <h2 className="lead">{name1} {lastName}</h2>
               <h3 className="fs-6 text-muted text-capitalize">{job}</h3>
-              <p className="blockquote">Some quick example text tp build on the card title and make up the bulk of the cads content.</p>
+              <p className="blockquote mb-0">Some quick example text tp build on the card title and make up the bulk of the cads content.</p>
               <footer></footer>
               </div>
             </div>
-            
+            </div>
            )
           })}
-          </div>
+          
         </div>
       </div>
     </div>
