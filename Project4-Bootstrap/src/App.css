@@ -134,3 +134,31 @@ background-color: var(--secondary-color);
 margin-right: 1rem;
 color:white;
 }
+.contact {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(188, 108, 37, 0.5)),url("/slider2.jpg")
+ 
+}
+
+.contact input {
+  background-color: inherit;
+  
+}
+.contact textarea{
+   background-color: inherit;
+   resize: none;
+   height: 100px !important;
+}
+
+.contact input:focus {
+ background-color: var(--primary-color);
+}
+.contact textarea:focus{
+   background-color: var(--primary-color);
+}
+
+.contact input::placeholder {
+  color: white !important;
+}
+.contact textarea::placeholder {
+  color: white !important;
+}
