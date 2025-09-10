@@ -53,7 +53,7 @@ const CoffeeShop = () => {
   const ourMenu = [
     {
       img: "/menu-1.png",
-      type: "latte",
+      type: "dalgona",
     },
     {
       img: "/menu-2.png",
@@ -293,25 +293,108 @@ const CoffeeShop = () => {
       </div>
       {/* Our menu */}
 
-      <section className="menu">
+      <section className="menu py-5">
+        
         <div className="menu-header text-center">
           <h2>OUR MENU</h2>
-        </div>
-        <div className="container">
-          <div className="row d-flex justify-content-center align-items-center">
-            {ourMenu.map((item, index) => {
-              const { img, type } = item;
-              return (
-                <div key={index} className="col col-sm-12 col-md-6">
-                  <div className="image-menu">
-                    <img src={img}alt="" />
-                    <h1 className="text-center">{type}</h1>
-                  </div>
+          <div className="container p-5">
+
+            <ul className="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link active bg-dark"
+                  id="pills-coffee-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-coffee"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-home"
+                  aria-selected="true"
+                >
+                  Coffee
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link bg-dark"
+                  id="pills-food-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-food"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Food
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link bg-dark"
+                  id="pills-desert-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-desert"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Desert
+                </button>
+              </li>
+            </ul>
+            <div className="tab-content" id="pills-tabContent">
+              <div
+                className="tab-pane fade show active"
+                id="pills-coffee"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+                tabIndex={0}
+              >
+                <div className="row">
+                  {ourMenu.map((item, i) => {
+                    const { img, type } = item;
+                    return (
+                      <div key={i} className="col-md-6 col-lg-3">
+                        <a href="">
+                          <img src={img} alt="" 
+                          className="w-100"/>
+                        </a>
+                        <h6 className="text-center text-capitalize">{type}</h6>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
+              </div>
+              <div
+                className="tab-pane fade"
+                id="pills-food"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+                tabIndex={0}
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+                maxime veniam! Omnis, mollitia accusantium! Omnis, corporis
+                numquam voluptatem, quasi, voluptate ipsa quis quod rem nam
+                minus facilis quisquam quibusdam nulla?
+              </div>
+              <div
+                className="tab-pane fade"
+                id="pills-desert"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+                tabIndex={0}
+              >
+                Lorem ipsum dolor sit amet consectetur
+              </div>
+            </div>
+          
+
           </div>
         </div>
+        
+         
+      
       </section>
     </div>
   );

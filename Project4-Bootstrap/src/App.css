@@ -108,7 +108,7 @@ section#about {
 .people .card{
   background-color: var(--primary-color);
   transition: all 0.5s;
-  overflow: hidden;
+
 }
 .people .card:hover {
     transform:scale(1.05);
@@ -116,10 +116,21 @@ section#about {
 
   .menu {
     background-color: var(--secondary-color);
-    height:700px;
+   
   }
 
   .menu-header{
     color: var(--primary-color);
     
   }
+
+  .menu.container {
+  background-color: var(--primary-color) ;
+ 
+  }
+
+.menu button{
+background-color: var(--secondary-color);
+margin-right: 1rem;
+color:white;
+}
