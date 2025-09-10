@@ -6,7 +6,7 @@ const CoffeeShop = () => {
       dateOfBirth: "1987",
       salary: 25000,
       job: "developer",
-      img:"/our-team-1.jpg",
+      img: "/our-team-1.jpg",
     },
     {
       name1: "Luis",
@@ -14,7 +14,7 @@ const CoffeeShop = () => {
       dateOfBirth: "1989",
       salary: 2000,
       job: "developer",
-       img:"/our-team-2.jpg"
+      img: "/our-team-2.jpg",
     },
     {
       name1: "Muge",
@@ -22,7 +22,7 @@ const CoffeeShop = () => {
       dateOfBirth: "2000",
       salary: 2300,
       job: "developer",
-       img:"/our-team-3.jpg",
+      img: "/our-team-3.jpg",
     },
     {
       name1: "Rua",
@@ -30,7 +30,7 @@ const CoffeeShop = () => {
       dateOfBirth: "2000",
       salary: 2300,
       job: "developer",
-       img:"/our-team-4.jpg",
+      img: "/our-team-4.jpg",
     },
     {
       name1: "Marta",
@@ -38,7 +38,7 @@ const CoffeeShop = () => {
       dateOfBirth: "2000",
       salary: 2300,
       job: "developer",
-      img:"/our-team-5.jpg",
+      img: "/our-team-5.jpg",
     },
     {
       name1: "Joao",
@@ -46,10 +46,36 @@ const CoffeeShop = () => {
       dateOfBirth: "2000",
       salary: 2300,
       job: "developer",
-      img:"/our-team-6.jpg",
+      img: "/our-team-6.jpg",
     },
   ];
 
+  const ourMenu = [
+    {
+      img: "/menu-1.png",
+      type: "latte",
+    },
+    {
+      img: "/menu-2.png",
+      type: "cappuccino",
+    },
+    {
+      img: "/menu-3.png",
+      type: "cappuccino with chocolate",
+    },
+    {
+      img: "/menu-4.png",
+      type: "turkish coffee",
+    },
+    {
+      img: "/menu-5.png",
+      type: "espresso",
+    },
+    {
+      img: "/menu-6.png",
+      type: "coffee",
+    },
+  ];
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
@@ -213,13 +239,13 @@ const CoffeeShop = () => {
           <div className="row align-items-center justify-content-center">
             <div className="col col-sm-12 col-md-6">
               <div className="image-container mt-5 rounded-5 overflow-hidden">
-                <img src="./about.jpg" alt=""/>
-            
-              <div className="about-info d-flex  flex-column justify-content-end p-3 "> 
-                <h4 className="fw-bold">We start since 2019</h4>
-                <p className="fs-6">Best in Dublin</p>
-              </div>
+                <img src="./about.jpg" alt="" />
+
+                <div className="about-info d-flex  flex-column justify-content-end p-3 ">
+                  <h4 className="fw-bold">We start since 2019</h4>
+                  <p className="fs-6">Best in Dublin</p>
                 </div>
+              </div>
             </div>
             <div className="col  col-sm-12 col-md-6 my-5">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -231,38 +257,63 @@ const CoffeeShop = () => {
         </div>
       </section>
       {/* Meet People */}
-    <div className="people">
-      <div className="people-header text-center text-white">
-        <em>Creative Barista</em>
-        <h2>Meet People</h2>
-      </div>
-      <div className="container">
-      <div className="row d-flex justify-content-center align-items-center">
-         {employees.map((item, index)=> {
-          const {name1,img, lastName, dateOfBirth, salary, job} =item
-           return (
-        <div  key={index} className="col col-xs-12 col-sm-6 col-m-4 col-lg-3 col-xl-2">
-         
-            <div className="card">
-              <img src={img} alt="" />
-              <div className="card-body">
-              <h2 className="lead">{name1} {lastName}</h2>
-              <h3 className="fs-6 text-muted text-capitalize">{job}</h3>
-              <p className="blockquote mb-0">Some quick example text tp build on the card title and make up the bulk of the cads content.</p>
-              <footer></footer>
-              </div>
-            </div>
-            </div>
-           )
-          })}
-          
+      <div className="people">
+        <div className="people-header text-center text-white">
+          <em>Creative Barista</em>
+          <h2>Meet People</h2>
+        </div>
+        <div className="container">
+          <div className="row d-flex justify-content-center align-items-center">
+            {employees.map((item, index) => {
+              const { name1, img, lastName, dateOfBirth, salary, job } = item;
+              return (
+                <div
+                  key={index}
+                  className="col col-xs-12 col-sm-6 col-m-4 col-lg-3 col-xl-2"
+                >
+                  <div className="card">
+                    <img src={img} alt="" />
+                    <div className="card-body">
+                      <h2 className="lead">
+                        {name1} {lastName}
+                      </h2>
+                      <h3 className="fs-6 text-muted text-capitalize">{job}</h3>
+                      <p className="blockquote mb-0">
+                        Some quick example text tp build on the card title and
+                        make up the bulk of the cads content.
+                      </p>
+                      <footer></footer>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
-      {/*  */}
-    </div>
+      {/* Our menu */}
 
-
+      <section className="menu">
+        <div className="menu-header text-center">
+          <h2>OUR MENU</h2>
+        </div>
+        <div className="container">
+          <div className="row d-flex justify-content-center align-items-center">
+            {ourMenu.map((item, index) => {
+              const { img, type } = item;
+              return (
+                <div key={index} className="col col-sm-12 col-md-6">
+                  <div className="image-menu">
+                    <img src={img}alt="" />
+                    <h1 className="text-center">{type}</h1>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

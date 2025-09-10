@@ -113,3 +113,13 @@ section#about {
 .people .card:hover {
     transform:scale(1.05);
   }
+
+  .menu {
+    background-color: var(--secondary-color);
+    height:700px;
+  }
+
+  .menu-header{
+    color: var(--primary-color);
+    
+  }
