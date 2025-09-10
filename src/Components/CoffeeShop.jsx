@@ -94,7 +94,6 @@ const CoffeeShop = () => {
       imgs: "/4_peanut-butter.webp",
       type: "Peanut Butter",
     },
-    
   ];
   const desert = [
     {
@@ -113,7 +112,6 @@ const CoffeeShop = () => {
       imgs: "/4_LemonMeringue.webp",
       type: "Lemon Meringue",
     },
-    
   ];
   return (
     <div>
@@ -333,16 +331,10 @@ const CoffeeShop = () => {
       {/* Our menu */}
 
       <section className="menu py-5">
-        
         <div className="menu-header text-center">
           <h2>OUR MENU</h2>
           <div className="container p-5">
-
             <ul className="nav nav-pills mb-3 " id="pills-tab" role="tablist">
-              
-              
-              
-              
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active bg-dark"
@@ -400,8 +392,7 @@ const CoffeeShop = () => {
                     return (
                       <div key={i} className="col-md-6 col-lg-3">
                         <a href="">
-                          <img src={img} alt="" 
-                          className="w-100"/>
+                          <img src={img} alt="" className="w-100" />
                         </a>
                         <h6 className="text-center text-capitalize">{type}</h6>
                       </div>
@@ -416,14 +407,13 @@ const CoffeeShop = () => {
                 aria-labelledby="pills-profile-tab"
                 tabIndex={0}
               >
-               <div className="row">
+                <div className="row">
                   {food.map((item, i) => {
                     const { imgs, type } = item;
                     return (
                       <div key={i} className="col-md-6 col-lg-3">
                         <a href="">
-                          <img src={imgs} 
-                          className="w-100"/>
+                          <img src={imgs} className="w-100" />
                         </a>
                         <h6 className="text-center text-capitalize">{type}</h6>
                       </div>
@@ -438,14 +428,13 @@ const CoffeeShop = () => {
                 aria-labelledby="pills-contact-tab"
                 tabIndex={0}
               >
-                 <div className="row">
+                <div className="row">
                   {desert.map((item, i) => {
                     const { imgs, type } = item;
                     return (
                       <div key={i} className="col-md-6 col-lg-3">
                         <a href="">
-                          <img src={imgs} alt="" 
-                          className="w-100"/>
+                          <img src={imgs} alt="" className="w-100" />
                         </a>
                         <h6 className="text-center text-capitalize">{type}</h6>
                       </div>
@@ -454,14 +443,11 @@ const CoffeeShop = () => {
                 </div>
               </div>
             </div>
-          
-
           </div>
         </div>
-        
-         
-      
       </section>
+
+      <form action=""></form>
     </div>
   );
 };
