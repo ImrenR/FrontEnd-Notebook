@@ -1,12 +1,48 @@
-# React + Vite
+# FrontEndRecap
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A collection of frontend practice projects built with HTML, CSS, and Vanilla JavaScript.
+The goal of this repository is to recap core web development concepts by building small, hands-on projects without relying on external frameworks or libraries.
 
-## Expanding the ESLint configuration
+## Projects
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Flex & FlexboxProject → Practice using CSS Flexbox for layouts.
+
+JavaScript → Covers core JavaScript fundamentals through small exercises.
+
+MediaQuery → Responsive design experiments with CSS media queries.
+
+Project →(Wallet App) A simple task manager built with pure JavaScript, HTML, and CSS.
+
+Project2 (To-Do List App) → A simple task manager built with pure JavaScript, HTML, and CSS.
+
+And will be updated more ...
+## How to Run
+
+Clone the repository:
+
+git clone https://github.com/imrenr/frontendrecap.git
+
+
+Navigate to the project folder you want to run.
+
+Open the index.html file in your browser.
+
+## Purpose
+
+This repo serves as:
+
+A recap of essential frontend concepts.
+
+A reference for beginners learning HTML, CSS, and JavaScript.
+
+A practice space for building small, functional projects without frameworks.
+
+## Future Plans
+
+Add more JavaScript DOM and React JS ( with Vite) projects.
+
+Expand responsive design examples.
+
+Improve UI/UX styling of projects.
