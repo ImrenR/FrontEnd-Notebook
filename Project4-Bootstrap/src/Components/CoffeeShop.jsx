@@ -76,6 +76,45 @@ const CoffeeShop = () => {
       type: "coffee",
     },
   ];
+
+  const food = [
+    {
+      imgs: "/1_steak.webp",
+      type: "Steak",
+    },
+    {
+      imgs: "/2_gigerbread.webp",
+      type: "Giger Bread",
+    },
+    {
+      imgs: "/3_summer-squash-pizza.webp",
+      type: "Pizza",
+    },
+    {
+      imgs: "/4_peanut-butter.webp",
+      type: "Peanut Butter",
+    },
+    
+  ];
+  const desert = [
+    {
+      imgs: "/1_corn-cake.webp",
+      type: "Corn Cake",
+    },
+    {
+      imgs: "/2_gigerbread.webp",
+      type: "Giger Bread",
+    },
+    {
+      imgs: "/3_Grape_almond.webp",
+      type: "Grape Almond Desert",
+    },
+    {
+      imgs: "/4_LemonMeringue.webp",
+      type: "Lemon Meringue",
+    },
+    
+  ];
   return (
     <div>
       <nav className="navbar navbar-expand-lg">
@@ -300,6 +339,10 @@ const CoffeeShop = () => {
           <div className="container p-5">
 
             <ul className="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+              
+              
+              
+              
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active bg-dark"
@@ -373,10 +416,20 @@ const CoffeeShop = () => {
                 aria-labelledby="pills-profile-tab"
                 tabIndex={0}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
-                maxime veniam! Omnis, mollitia accusantium! Omnis, corporis
-                numquam voluptatem, quasi, voluptate ipsa quis quod rem nam
-                minus facilis quisquam quibusdam nulla?
+               <div className="row">
+                  {food.map((item, i) => {
+                    const { imgs, type } = item;
+                    return (
+                      <div key={i} className="col-md-6 col-lg-3">
+                        <a href="">
+                          <img src={imgs} 
+                          className="w-100"/>
+                        </a>
+                        <h6 className="text-center text-capitalize">{type}</h6>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
               <div
                 className="tab-pane fade"
@@ -385,7 +438,20 @@ const CoffeeShop = () => {
                 aria-labelledby="pills-contact-tab"
                 tabIndex={0}
               >
-                Lorem ipsum dolor sit amet consectetur
+                 <div className="row">
+                  {desert.map((item, i) => {
+                    const { imgs, type } = item;
+                    return (
+                      <div key={i} className="col-md-6 col-lg-3">
+                        <a href="">
+                          <img src={imgs} alt="" 
+                          className="w-100"/>
+                        </a>
+                        <h6 className="text-center text-capitalize">{type}</h6>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           
