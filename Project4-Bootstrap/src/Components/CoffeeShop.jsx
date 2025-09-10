@@ -181,17 +181,18 @@ const CoffeeShop = () => {
 
       {/* About Us */}
       <section id="about" className="py-5">
-        <h1>About Us</h1>
+        <h1 className="text-center">About Us</h1>
         <div className="container">
-          <div className="row">
-            <div className="col  col-sm-12 col-md-6">
-              <div className="image-container">
-                <img src="/about.jpg" alt="" />
+          <div className="row align-items-center justify-content-center">
+            <div className="col col-sm-12 col-md-6">
+              <div className="image-container mt-5 rounded-5 overflow-hidden">
+                <img src="./about.jpg" alt=""/>
+            
+              <div className="about-info d-flex  flex-column justify-content-end p-3 "> 
+                <h4 className="fw-bold">We start since 2019</h4>
+                <p className="fs-6">Best in Dublin</p>
               </div>
-              <div className="about-info">
-                <h4>We start since 2019</h4>
-                <p>Best in Dublin</p>
-              </div>
+                </div>
             </div>
             <div className="col  col-sm-12 col-md-6 my-5">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.

@@ -6,27 +6,24 @@
   --hover-color: #e76f51;
   --section-color: #b78752;
 }
-*{
+* {
   font-family: "Plus Jakarta Sans", serif;
 }
 
 .navbar {
-position:fixed;
-z-index: 5;
-width:100%;
-
+  position: fixed;
+  z-index: 5;
+  width: 100%;
 }
-.navbar .container{
+.navbar .container {
   background-color: rgba(0, 0, 0, 0.7) !important;
 }
-.navbar .nav-link:hover{
-  color:var(--primary-color) !important;
+.navbar .nav-link:hover {
+  color: var(--primary-color) !important;
 }
 
-
-.carousel-item{
+.carousel-item {
   height: 100vh;
-
 }
 .carousel-item img {
   height: 100%;
@@ -35,29 +32,28 @@ width:100%;
 
 .carousel-caption .btn {
   background-color: var(--primary-color);
-  border:none;
+  border: none;
   width: 10rem;
   white-space: nowrap;
-  color:white ;
+  color: white;
 }
 
-  .carousel-caption .btn:first-child {
+.carousel-caption .btn:first-child {
   background-color: transparent;
 }
 
 .carousel-caption .btn:first-child:hover {
-background-color: white ;
-color: black; 
+  background-color: white;
+  color: black;
 }
 
-.carousel-caption{
+.carousel-caption {
   bottom: 40%;
 }
 
-.hero{
- position: relative;
- z-index: 3;
-
+.hero {
+  position: relative;
+  z-index: 3;
 }
 
 .black {
@@ -67,24 +63,36 @@ color: black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
- background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .carousel-indicators button {
-background-color: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
 }
 
-
-section#about{
+section#about {
   background-color: var(--secondary-color);
-  height: 600px;
-  color:white;
 
+  color: white;
 }
 
-.container img{
-  width: 300px;
-  border-radius: 2rem;
-  margin-top: 2rem;
+.image-container {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
 }
 
+.about-info {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(188, 108, 37, 0.5)
+  );
+}
