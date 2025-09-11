@@ -17,8 +17,8 @@ const incrementFive = ()=>{
   <div>
     Count: {count}
     <button onClick={()=>setCount(initialCount)}>Reset</button>
-    <button onClick={()=>setCount(count + 1)}>Incresement</button>
-    <button onClick={()=> setCount(count-1)}>Decresement</button>
+    <button onClick={()=>setCount(prevCount => prevCount + 1)}>Incresement</button>
+    <button onClick={()=>  setCount(prevCount => prevCount -1)}>Decresement</button>
 
     <button onClick={incrementFive}>Increment 5</button>
     </div>
