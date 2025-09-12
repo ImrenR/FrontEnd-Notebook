@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const SearchBar = ({ searchQuery, onSearchChange }) => (
   <div className="control-group">

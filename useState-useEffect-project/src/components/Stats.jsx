@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const Stats = ({ totalUsers, activeUsers, inactiveUsers, filteredCount }) => (
   <div className="stats">

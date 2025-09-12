@@ -111,7 +111,7 @@ const Home = () => {
     setFilters({ department: 'all', status: 'all', role: 'all' });
   };
 
-  // Calculate statistics
+  
   const totalUsers = users.length;
   const activeUsers = users.filter(user => user.status === 'Active').length;
   const inactiveUsers = users.filter(user => user.status === 'Inactive').length;
