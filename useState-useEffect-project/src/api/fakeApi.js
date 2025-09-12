@@ -1,4 +1,6 @@
-// Fake API service with sample data
+import axios from 'axios';
+
+// Sample data
 const sampleData = [
   {
     id: 1,
@@ -74,57 +76,98 @@ const sampleData = [
   }
 ];
 
-// Simulate API delay
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+// Simulate API delay using axios interceptor
+axios.interceptors.request.use(
+  (config) => {
+    // Add delay to simulate network latency
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(config), 800);
+    });
+  },
+  (error) => Promise.reject(error)
+);
 
-// Fake API functions
+// Fake API functions using axios
 export const fetchUsers = async () => {
-  await delay(800); // Simulate network delay
-  return [...sampleData];
+  try {
+    const response = await axios.get('/api/users');
+    return response.data;
+  } catch (error) {
+    // Return sample data if API fails (simulating fake API)
+    return sampleData;
+  }
 };
 
 export const searchUsers = async (query) => {
-  await delay(500);
-  if (!query.trim()) return [...sampleData];
-  
-  return sampleData.filter(user => 
-    user.name.toLowerCase().includes(query.toLowerCase()) ||
-    user.email.toLowerCase().includes(query.toLowerCase()) ||
-    user.role.toLowerCase().includes(query.toLowerCase()) ||
-    user.department.toLowerCase().includes(query.toLowerCase())
-  );
+  try {
+    const response = await axios.get(`/api/users/search?q=${encodeURIComponent(query)}`);
+    return response.data;
+  } catch (error) {
+    // Return filtered sample data if API fails
+    if (!query.trim()) return sampleData;
+    
+    return sampleData.filter(user => 
+      user.name.toLowerCase().includes(query.toLowerCase()) ||
+      user.email.toLowerCase().includes(query.toLowerCase()) ||
+      user.role.toLowerCase().includes(query.toLowerCase()) ||
+      user.department.toLowerCase().includes(query.toLowerCase())
+    );
+  }
 };
 
 export const filterUsers = async (filters) => {
-  await delay(300);
-  let filtered = [...sampleData];
-  
-  if (filters.department && filters.department !== 'all') {
-    filtered = filtered.filter(user => user.department === filters.department);
+  try {
+    const response = await axios.post('/api/users/filter', filters);
+    return response.data;
+  } catch (error) {
+    // Return filtered sample data if API fails
+    let filtered = [...sampleData];
+    
+    if (filters.department && filters.department !== 'all') {
+      filtered = filtered.filter(user => user.department === filters.department);
+    }
+    
+    if (filters.status && filters.status !== 'all') {
+      filtered = filtered.filter(user => user.status === filters.status);
+    }
+    
+    if (filters.role && filters.role !== 'all') {
+      filtered = filtered.filter(user => user.role === filters.role);
+    }
+    
+    return filtered;
   }
-  
-  if (filters.status && filters.status !== 'all') {
-    filtered = filtered.filter(user => user.status === filters.status);
-  }
-  
-  if (filters.role && filters.role !== 'all') {
-    filtered = filtered.filter(user => user.role === filters.role);
-  }
-  
-  return filtered;
 };
 
-export const getDepartments = () => {
-  const departments = [...new Set(sampleData.map(user => user.department))];
-  return departments;
+export const getDepartments = async () => {
+  try {
+    const response = await axios.get('/api/departments');
+    return response.data;
+  } catch (error) {
+    // Return sample departments if API fails
+    const departments = [...new Set(sampleData.map(user => user.department))];
+    return departments;
+  }
 };
 
-export const getRoles = () => {
-  const roles = [...new Set(sampleData.map(user => user.role))];
-  return roles;
+export const getRoles = async () => {
+  try {
+    const response = await axios.get('/api/roles');
+    return response.data;
+  } catch (error) {
+    // Return sample roles if API fails
+    const roles = [...new Set(sampleData.map(user => user.role))];
+    return roles;
+  }
 };
 
-export const getStatuses = () => {
-  const statuses = [...new Set(sampleData.map(user => user.status))];
-  return statuses;
+export const getStatuses = async () => {
+  try {
+    const response = await axios.get('/api/statuses');
+    return response.data;
+  } catch (error) {
+    // Return sample statuses if API fails
+    const statuses = [...new Set(sampleData.map(user => user.status))];
+    return statuses;
+  }
 };

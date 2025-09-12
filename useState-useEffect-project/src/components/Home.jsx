@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import * as fakeApi from '../api/fakeApi';
 import Header from './Header';
 import Stats from './Stats';
@@ -6,7 +6,7 @@ import Controls from './Controls';
 import UserList from './UserList';
 
 const Home = () => {
-  // State management
+  
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -22,17 +22,15 @@ const Home = () => {
     statuses: []
   });
 
-  // Load initial data
+  
   useEffect(() => {
     const loadInitialData = async () => {
       setLoading(true);
       try {
-        const [usersData, deptData, roleData, statusData] = await Promise.all([
-          fakeApi.fetchUsers(),
-          fakeApi.getDepartments(),
-          fakeApi.getRoles(),
-          fakeApi.getStatuses()
-        ]);
+        const usersData = await fakeApi.fetchUsers();
+        const deptData = await fakeApi.getDepartments();
+        const roleData = await fakeApi.getRoles();
+        const statusData = await fakeApi.getStatuses();
         
         setUsers(usersData);
         setFilteredUsers(usersData);
